@@ -7,7 +7,7 @@
 <meta name="description" content="수료생들이 6개월 만에 만든 작업물을 먼저 보세요. AI영상제작·3D모델링 국비지원교육. 자부담 최대 60만원, 노트북 무상 지원, 전국 실시간 온라인.">
 <meta property="og:title" content="6개월 전엔 3D를 만져본 적도 없었습니다">
 <meta property="og:description" content="수료생 작업물을 먼저 보세요 — MBC플러스 엠플러닝 AI·3D 국비지원교육">
-<meta property="og:image" content="https://img.youtube.com/vi/KRNbxHoy560/maxresdefault.jpg">
+<meta property="og:image" content="https://img.youtube.com/vi/Q4iEB4HeyyY/maxresdefault.jpg">
 <meta property="og:type" content="website">
 
 <!-- ===================================================================
@@ -127,9 +127,33 @@ strong{font-weight:700;color:var(--navy)}
   padding:18px 20px;margin:20px 0}
 .callout p{margin:6px 0}
 .tools{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:20px}
-.tool{border:1px solid var(--line);border-radius:12px;padding:17px}
-.tool b{display:block;font-size:16.5px;color:var(--navy);margin-bottom:3px}
-.tool span{font-size:14.5px;color:var(--muted)}
+.tool{border:1px solid var(--line);border-radius:13px;padding:15px;display:flex;
+  align-items:center;gap:14px;background:#fff;transition:border-color .2s,box-shadow .2s}
+.tool:hover{border-color:#C3D4EE;box-shadow:0 3px 14px rgba(20,40,80,.07)}
+.tool .mark{flex:0 0 auto;width:52px;height:52px;border-radius:13px;color:#fff;
+  display:flex;align-items:center;justify-content:center;font-weight:800;
+  font-size:17px;letter-spacing:-.02em}
+.tool .tx b{display:block;font-size:16.5px;color:var(--navy);margin-bottom:2px}
+.tool .tx span{font-size:14px;color:var(--muted);line-height:1.5}
+
+.flow{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px;
+  margin-top:22px;padding:18px 14px;background:var(--soft);border-radius:13px}
+.flow span{background:#fff;border:1px solid var(--line);border-radius:8px;
+  padding:8px 14px;font-size:14.5px;font-weight:700;color:var(--navy)}
+.flow i{font-style:normal;color:var(--accent);font-weight:800;font-size:15px}
+
+/* spec cards */
+.speccards{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:20px}
+.sc{border:1px solid var(--line);border-radius:13px;padding:17px;background:#fff}
+.sc .ico{width:38px;height:38px;border-radius:10px;background:var(--sblue);
+  display:flex;align-items:center;justify-content:center;margin-bottom:11px}
+.sc .ico svg{width:20px;height:20px;stroke:var(--accent);fill:none;
+  stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.sc .k{font-size:13px;font-weight:700;color:var(--muted);margin-bottom:2px}
+.sc .v{font-size:17px;font-weight:800;color:var(--navy);line-height:1.4;letter-spacing:-.02em}
+.sc .n{font-size:13px;color:var(--muted);margin-top:3px}
+.sc.hl{background:var(--sblue);border-color:#C9DCFB}
+.sc.hl .ico{background:#fff}
 ul{list-style:none;margin:14px 0}
 li{position:relative;padding-left:22px;margin:11px 0;color:#33425A}
 li::before{content:"";position:absolute;left:2px;top:11px;width:7px;height:7px;
@@ -151,6 +175,155 @@ ol.steps li::before{content:counter(s);position:absolute;left:0;top:2px;width:26
 .qa:last-of-type{border-bottom:1px solid var(--line)}
 .qa .q{font-size:15px;font-weight:700;color:var(--accent);margin-bottom:4px}
 .qa .a{font-size:16px;color:#33425A;margin:0}
+
+/* ── MID CTA / FAQ / URGENT ─────────── */
+.midcta{background:linear-gradient(135deg,#1D4FD1,#3B82F6);border-radius:16px;
+  padding:26px 24px;margin:28px 0 4px;text-align:center;color:#fff}
+.midcta .h{font-size:21px;font-weight:800;letter-spacing:-.02em;line-height:1.4}
+.midcta .s{font-size:15.5px;color:#D6E4FF;margin-top:8px}
+.midcta a{display:inline-block;margin-top:16px;background:#fff;color:#1D4FD1;
+  padding:13px 30px;border-radius:10px;font-weight:800;font-size:16px;text-decoration:none}
+.midcta a:hover{background:#EAF1FF}
+.faq{border-bottom:1px solid var(--line);padding:18px 0}
+.faq:first-of-type{border-top:1px solid var(--line)}
+.faq .q{font-size:16.5px;font-weight:800;color:var(--navy);margin-bottom:6px}
+.faq .q::before{content:"Q. ";color:var(--accent)}
+.faq .a{font-size:16px;color:#3A4A64;margin:0}
+.urgent{background:#FFF7EA;border:1px solid #F3DCB2;border-radius:14px;padding:22px;margin:18px 0}
+.urgent .h{font-size:17px;font-weight:800;color:#8A5A12;margin-bottom:10px}
+.urgent .row{display:flex;justify-content:space-between;gap:12px;padding:9px 0;
+  border-bottom:1px dashed #EBD5A9;font-size:15.5px;color:#5C4415}
+.urgent .row:last-of-type{border:0}
+.urgent .row b{color:#7A4E0C;white-space:nowrap}
+
+/* ── STATS ──────────────────────────── */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;
+  background:rgba(255,255,255,.09);border-radius:14px;overflow:hidden;margin-top:26px}
+.stat{background:#0E1B2E;padding:20px 10px;text-align:center}
+.stat .n{font-size:27px;font-weight:800;color:var(--gold);letter-spacing:-.03em;line-height:1.2}
+.stat .l{font-size:12.5px;color:#9CADC6;margin-top:5px;line-height:1.4}
+
+/* ── TIMETABLE ──────────────────────── */
+.tt{margin-top:22px;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.tt .hd{display:grid;grid-template-columns:56px repeat(5,1fr);background:var(--soft)}
+.tt .hd div{padding:11px 4px;text-align:center;font-size:13px;font-weight:800;color:var(--navy)}
+.tt .bd{display:grid;grid-template-columns:56px repeat(5,1fr)}
+.tt .hr{padding:9px 4px;font-size:12px;color:var(--muted);text-align:right;
+  border-top:1px solid var(--line);background:#FCFDFF}
+.tt .cell{border-top:1px solid var(--line);border-left:1px solid var(--line);min-height:34px}
+.tt .cell.on{background:linear-gradient(180deg,#3B82F6,#2563EB)}
+.tt .cell.on.first{position:relative}
+.tt .cell.on.first::after{content:"수업";position:absolute;inset:0;display:flex;
+  align-items:center;justify-content:center;color:#fff;font-size:11.5px;font-weight:800}
+.tt .cell.off{background:#F7F9FC}
+.ttnote{display:flex;gap:16px;justify-content:center;margin-top:12px;font-size:13px;color:var(--muted)}
+.ttnote i{font-style:normal;display:inline-block;width:11px;height:11px;border-radius:3px;
+  margin-right:5px;vertical-align:-1px}
+
+/* ── FEATURE CARDS ──────────────────── */
+.feats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
+.feat{border:1px solid var(--line);border-radius:14px;padding:20px 17px;text-align:center;background:#fff}
+.feat .ic{width:46px;height:46px;border-radius:13px;background:var(--sblue);margin:0 auto 12px;
+  display:flex;align-items:center;justify-content:center}
+.feat .ic svg{width:23px;height:23px;stroke:var(--accent);fill:none;stroke-width:1.8;
+  stroke-linecap:round;stroke-linejoin:round}
+.feat b{display:block;font-size:16px;color:var(--navy);margin-bottom:4px}
+.feat span{font-size:13.5px;color:var(--muted);line-height:1.6}
+
+/* ── TIMELINE ───────────────────────── */
+.tl{margin-top:24px;position:relative;padding-left:34px}
+.tl::before{content:"";position:absolute;left:11px;top:8px;bottom:8px;width:2px;
+  background:linear-gradient(180deg,var(--accent),#C9DCFB)}
+.tl .step{position:relative;padding:0 0 26px}
+.tl .step:last-child{padding-bottom:0}
+.tl .step::before{content:"";position:absolute;left:-29px;top:4px;width:16px;height:16px;
+  border-radius:50%;background:#fff;border:3px solid var(--accent)}
+.tl .step.gold::before{border-color:var(--gold)}
+.tl .when{font-size:12.5px;font-weight:800;color:var(--accent);letter-spacing:.02em}
+.tl .step.gold .when{color:#C98A0E}
+.tl .what{font-size:17.5px;font-weight:800;color:var(--navy);margin:2px 0 5px;letter-spacing:-.02em}
+.tl .desc{font-size:15px;color:#4A5A73;margin:0}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}
+.chips span{background:var(--soft);border:1px solid var(--line);border-radius:99px;
+  padding:6px 13px;font-size:13.5px;font-weight:700;color:var(--navy)}
+.chips span.g{background:#FFF7EA;border-color:#F0DDB6;color:#8A5A12}
+
+/* ── JAPAN ──────────────────────────── */
+.jp{margin-top:28px;border-radius:18px;padding:28px 24px;text-align:center;
+  background:linear-gradient(150deg,#1A2B47,#0B1626);border:1px solid #2A3E5F}
+.jptag{display:inline-block;font-size:12.5px;font-weight:800;letter-spacing:.05em;
+  color:#12233C;background:var(--gold);padding:6px 14px;border-radius:99px}
+.jph{font-size:25px;font-weight:800;color:#fff;letter-spacing:-.03em;margin-top:14px}
+.jpd{font-size:15px;color:#A7B8D0;margin-top:9px;line-height:1.65}
+.jplogos{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:22px}
+.jplogo{background:#fff;border-radius:11px;height:64px;display:flex;align-items:center;
+  justify-content:center;padding:11px 13px;overflow:hidden}
+.jplogo img{max-width:100%;max-height:100%;object-fit:contain}
+.jplogo span{display:none;font-size:14.5px;font-weight:800;color:#16294A;letter-spacing:-.02em}
+.jplogo.txt span{display:block}
+
+/* ── REVIEWS SECTION ────────────────── */
+.rev{background:var(--navy2);border:0}
+.rev h2{color:#fff}
+.rev .eyebrow{color:#7FA8FF}
+.rev .sub{color:#9CADC6;font-size:15px;margin-top:6px}
+
+/* ── TEACHERS ───────────────────────── */
+.tcs{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:22px}
+.tc{text-align:center}
+.tc .av{width:100%;aspect-ratio:1;border-radius:16px;display:flex;align-items:center;
+  justify-content:center;font-size:23px;font-weight:800;color:#fff;
+  background:linear-gradient(140deg,#2E4E86,#16294A);margin-bottom:8px}
+.tc .nm{font-size:14.5px;font-weight:800;color:var(--navy)}
+.tc .sb{font-size:11.5px;color:var(--muted);line-height:1.45;margin-top:1px}
+
+/* ── QUOTES ─────────────────────────── */
+.qs{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:20px}
+.qc{background:var(--soft);border-radius:14px;padding:20px 18px 18px;position:relative}
+.qc::before{content:"\201C";position:absolute;top:2px;left:14px;font-size:44px;
+  color:#C9DCFB;font-family:Georgia,serif;line-height:1}
+.qc p{margin:0;padding-top:14px;font-size:15.5px;color:#3A4A64;line-height:1.7}
+.qc.big{grid-column:1/-1;background:linear-gradient(135deg,#1D4FD1,#3B82F6)}
+.qc.big::before{color:rgba(255,255,255,.35)}
+.qc.big p{color:#fff;font-size:20px;font-weight:800;text-align:center;letter-spacing:-.02em}
+
+.rev .qc{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1)}
+.rev .qc::before{color:rgba(255,255,255,.28)}
+.rev .qc p{color:#D8E2F0}
+.rev .qc.big{background:linear-gradient(135deg,#2563EB,#3B82F6);border:0}
+.rev .qc.big p{color:#fff;font-size:24px;line-height:1.45}
+
+/* ── FIT / NOT FIT ──────────────────── */
+.fit{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:22px}
+.fitbox{border-radius:15px;padding:22px 20px}
+.fitbox.no{background:#FDF3F3;border:1px solid #F2D7D6}
+.fitbox.ok{background:#EEF8F4;border:1px solid #CFE9DF}
+.fitbox .ttl{font-size:16.5px;font-weight:800;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.fitbox.no .ttl{color:#A83B36}
+.fitbox.ok .ttl{color:#0F7A5C}
+.fitbox .ttl em{font-style:normal;width:24px;height:24px;border-radius:50%;color:#fff;
+  display:flex;align-items:center;justify-content:center;font-size:14px}
+.fitbox.no .ttl em{background:#C0453F}
+.fitbox.ok .ttl em{background:#0F7A5C}
+.fitbox ul{margin:0}
+.fitbox li{padding-left:16px;margin:9px 0;font-size:15px;color:#3E4C60}
+.fitbox li::before{width:5px;height:5px;top:10px;left:2px}
+.fitbox.no li::before{background:#C0453F}
+.fitbox.ok li::before{background:#0F7A5C}
+.fitbox li small{display:block;color:var(--muted);font-size:13px;margin-top:1px}
+
+/* ── ACCORDION ──────────────────────── */
+details.faq2{border:1px solid var(--line);border-radius:12px;margin:9px 0;background:#fff;
+  overflow:hidden;transition:border-color .2s}
+details.faq2[open]{border-color:#C3D4EE;box-shadow:0 3px 14px rgba(20,40,80,.06)}
+details.faq2 summary{list-style:none;cursor:pointer;padding:17px 46px 17px 18px;
+  font-size:16.5px;font-weight:700;color:var(--navy);position:relative}
+details.faq2 summary::-webkit-details-marker{display:none}
+details.faq2 summary::after{content:"";position:absolute;right:19px;top:23px;width:9px;height:9px;
+  border-right:2.2px solid var(--accent);border-bottom:2.2px solid var(--accent);
+  transform:rotate(45deg);transition:transform .2s}
+details.faq2[open] summary::after{transform:rotate(-135deg);top:26px}
+details.faq2 .ans{padding:0 18px 18px;font-size:15.5px;color:#3E4C60;line-height:1.75}
 
 /* ── FORM ───────────────────────────── */
 #apply{background:var(--navy);color:#fff;border:0;padding:56px 0}
@@ -186,6 +359,36 @@ footer{padding:34px 0 40px;font-size:14px;color:var(--muted);text-align:center;l
   h2{font-size:23px}
   .grid{grid-template-columns:repeat(2,1fr);gap:9px}
   .tools{grid-template-columns:1fr}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .stat{padding:16px 8px}
+  .stat .n{font-size:22px}
+  .feats{grid-template-columns:1fr;gap:10px}
+  .feat{display:flex;align-items:center;text-align:left;gap:14px;padding:15px}
+  .feat .ic{margin:0;flex:0 0 auto;width:42px;height:42px}
+  .feat span{font-size:13px}
+  .feat span br{display:none}
+  .tcs{grid-template-columns:repeat(3,1fr);gap:9px}
+  .tc .av{font-size:19px;border-radius:13px}
+  .qs{grid-template-columns:1fr}
+  .qc.big p{font-size:17.5px}
+  .rev .qc.big p{font-size:20px}
+  .jp{padding:24px 18px}
+  .jph{font-size:21px}
+  .jplogos{grid-template-columns:repeat(2,1fr);gap:8px}
+  .jplogo{height:56px;padding:9px 11px}
+  .fit{grid-template-columns:1fr;gap:11px}
+  .tt .hd,.tt .bd{grid-template-columns:46px repeat(5,1fr)}
+  .tt .hr{font-size:11px;padding:8px 3px}
+  .ttnote{flex-direction:column;gap:5px;align-items:center;font-size:12.5px}
+  .tl{padding-left:28px}
+  .tl .what{font-size:16px}
+  .speccards{gap:9px}
+  .sc{padding:14px}
+  .sc .v{font-size:15.5px}
+  .sc .n{font-size:12px}
+  .midcta .h{font-size:18px}
+  .flow{gap:6px;padding:14px 10px}
+  .flow span{padding:7px 11px;font-size:13.5px}
   .box .big{font-size:21px}
   .spec th{width:37%;font-size:15px}
 }
@@ -196,7 +399,7 @@ footer{padding:34px 0 40px;font-size:14px;color:var(--muted);text-align:center;l
 <!-- ══ HERO ══ -->
 <header class="hero">
   <div class="strip">
-    <img src="https://img.youtube.com/vi/KRNbxHoy560/mqdefault.jpg" alt="">
+    <img src="https://img.youtube.com/vi/echsvok-HbY/mqdefault.jpg" alt="">
     <img src="https://img.youtube.com/vi/Q4iEB4HeyyY/mqdefault.jpg" alt="">
     <img src="https://img.youtube.com/vi/7Lq2s3cw0yM/mqdefault.jpg" alt="">
     <img src="https://img.youtube.com/vi/IBO2ihqdVnc/mqdefault.jpg" alt="">
@@ -231,6 +434,19 @@ footer{padding:34px 0 40px;font-size:14px;color:var(--muted);text-align:center;l
         시작할 때 언리얼엔진을 켜본 적 있는 사람은 거의 없었습니다.
       </p>
     </div>
+
+    <div class="stats">
+      <div class="stat"><div class="n">6개월</div><div class="l">교육 기간</div></div>
+      <div class="stat"><div class="n">상위 20%</div><div class="l">인턴십 확정</div></div>
+      <div class="stat"><div class="n">170여 곳</div><div class="l">협약 기업</div></div>
+      <div class="stat"><div class="n">1인 1대</div><div class="l">노트북 무상</div></div>
+    </div>
+
+    <div class="midcta">
+      <div class="h">"나도 6개월 뒤에 저걸 만들 수 있을까?"</div>
+      <div class="s">그건 조건이 맞는지부터 확인해야 답이 나옵니다.<br>이름과 연락처만 남겨주시면 안내해 드립니다.</div>
+      <a href="#apply">내 조건 확인해보기</a>
+    </div>
   </div>
 </section>
 
@@ -241,16 +457,38 @@ footer{padding:34px 0 40px;font-size:14px;color:var(--muted);text-align:center;l
     <h2>실제로 다루는 툴</h2>
     <p class="lead">"AI영상제작", "3D 콘텐츠"라는 말로는 판단이 안 되실 겁니다. 위 결과물을 만들기 위해 실제로 배우는 툴은 이렇습니다.</p>
     <div class="tools">
-      <div class="tool"><b>언리얼엔진 5</b><span>리얼타임 렌더링, 버추얼 프로덕션</span></div>
-      <div class="tool"><b>Cinema 4D / Blender</b><span>3D모델링, 애니메이션</span></div>
-      <div class="tool"><b>Midjourney</b><span>생성형 AI 이미지</span></div>
-      <div class="tool"><b>Premiere Pro / After Effects</b><span>영상편집, 모션그래픽</span></div>
+      <div class="tool">
+        <div class="mark" style="background:linear-gradient(140deg,#2B2B2B,#0C0C0C)">UE5</div>
+        <div class="tx"><b>언리얼엔진 5</b><span>리얼타임 렌더링 · 버추얼 프로덕션</span></div>
+      </div>
+      <div class="tool">
+        <div class="mark" style="background:linear-gradient(140deg,#3A7BD5,#1E4FA8)">C4D</div>
+        <div class="tx"><b>Cinema 4D</b><span>3D모델링 · 애니메이션</span></div>
+      </div>
+      <div class="tool">
+        <div class="mark" style="background:linear-gradient(140deg,#F5A623,#E07B00)">B</div>
+        <div class="tx"><b>Blender</b><span>3D모델링 · 렌더링</span></div>
+      </div>
+      <div class="tool">
+        <div class="mark" style="background:linear-gradient(140deg,#4A4A6A,#16162B)">MJ</div>
+        <div class="tx"><b>Midjourney</b><span>생성형 AI 이미지</span></div>
+      </div>
+      <div class="tool">
+        <div class="mark" style="background:linear-gradient(140deg,#9A7BEA,#5B3FA8)">Pr</div>
+        <div class="tx"><b>Premiere Pro</b><span>영상편집</span></div>
+      </div>
+      <div class="tool">
+        <div class="mark" style="background:linear-gradient(140deg,#A88BF0,#4A2FA0)">Ae</div>
+        <div class="tx"><b>After Effects</b><span>모션그래픽 · 합성</span></div>
+      </div>
     </div>
-    <div class="callout">
-      <p>영상편집만 따로, 3D모델링만 따로 배우는 구조가 아닙니다.<br>
-      <strong>기획 → 3D 제작 → AI 활용 → 합성 → 편집</strong>까지 하나의 결과물로 이어집니다.</p>
-      <p class="muted" style="margin-bottom:0">방송 콘텐츠 제작 프로세스를 그대로 반영한 커리큘럼입니다.</p>
+
+    <div class="flow">
+      <span>기획</span><i>→</i><span>3D 제작</span><i>→</i><span>AI 활용</span><i>→</i><span>합성</span><i>→</i><span>편집</span>
     </div>
+    <p class="muted" style="text-align:center;margin-top:14px">
+      영상편집만 따로, 3D모델링만 따로 배우는 구조가 아닙니다.<br>
+      방송 콘텐츠 제작 프로세스를 그대로 반영해, 하나의 결과물로 이어집니다.</p>
   </div>
 </section>
 
@@ -259,15 +497,36 @@ footer{padding:34px 0 40px;font-size:14px;color:var(--muted);text-align:center;l
   <div class="wrap">
     <div class="eyebrow">한눈에 보기</div>
     <h2>과정 조건</h2>
-    <table class="spec">
-      <tr><th>교육 기간</th><td>6개월</td></tr>
-      <tr><th>수업 시간</th><td>월~금 09:30 ~ 18:20 (전일제)</td></tr>
-      <tr><th>수업 방식</th><td>실시간 비대면 · 전국 어디서나</td></tr>
-      <tr><th>자비부담금</th><td>최대 60만원 (나머지 전액 국비지원)</td></tr>
-      <tr><th>훈련장려금</th><td>월 최대 30만원</td></tr>
-      <tr><th>장비 지원</th><td>고성능 노트북 1인 1대 무상 대여</td></tr>
-      <tr><th>필수 조건</th><td>국민내일배움카드 발급</td></tr>
-    </table>
+    <div class="speccards">
+      <div class="sc">
+        <div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 11h18"/></svg></div>
+        <div class="k">교육 기간</div><div class="v">6개월</div>
+      </div>
+      <div class="sc">
+        <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <div class="k">수업 시간</div><div class="v">09:30 ~ 18:20</div><div class="n">월~금 전일제</div>
+      </div>
+      <div class="sc">
+        <div class="ico"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+        <div class="k">수업 방식</div><div class="v">실시간 비대면</div><div class="n">전국 어디서나</div>
+      </div>
+      <div class="sc hl">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M5 6l3.5 8L12 7l3.5 7L19 6"/><path d="M3.5 11h17M3.5 14.5h17"/></svg></div>
+        <div class="k">자비부담금</div><div class="v">최대 60만원</div><div class="n">나머지 전액 국비지원</div>
+      </div>
+      <div class="sc hl">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3v13"/><path d="M7.5 11.5 12 16l4.5-4.5"/><path d="M4 20h16"/></svg></div>
+        <div class="k">훈련장려금</div><div class="v">월 최대 30만원</div><div class="n">받으면서 다닙니다</div>
+      </div>
+      <div class="sc hl">
+        <div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M2 20h20"/></svg></div>
+        <div class="k">장비 지원</div><div class="v">노트북 무상 대여</div><div class="n">1인 1대 · 보증금 없음</div>
+      </div>
+      <div class="sc" style="grid-column:1/-1">
+        <div class="ico"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/></svg></div>
+        <div class="k">필수 조건</div><div class="v">국민내일배움카드 발급</div><div class="n">아직 없으셔도 발급 절차를 안내해 드립니다</div>
+      </div>
+    </div>
 
     <h3 style="margin-top:36px">얼마 내고, 얼마 받나</h3>
     <div class="box">
@@ -280,7 +539,7 @@ footer{padding:34px 0 40px;font-size:14px;color:var(--muted);text-align:center;l
       <div class="big">훈련장려금 월 최대 30만원</div>
       <div class="sub">국민취업지원제도 1유형 대상자는 월 최대 81만원</div>
     </div>
-    <p class="muted">※ 장려금은 지역·유형에 따라 달라집니다. 본인이 실제로 얼마를 받는지는 상담 때 계산해 알려드립니다.</p>
+    <p class="muted">※ 장려금은 지역·유형에 따라 달라집니다. 자세한 내용은 상담 시 안내해 드립니다.</p>
     <p class="muted">※ 「국비지원 무료교육」으로 검색해 오셨다면 — 완전 무료는 아닙니다. 위 금액이 실제 조건입니다.</p>
   </div>
 </section>
@@ -291,23 +550,24 @@ footer{padding:34px 0 40px;font-size:14px;color:var(--muted);text-align:center;l
     <div class="eyebrow">시작 장벽</div>
     <h2>집에서, 장비 없이 시작합니다</h2>
     <p class="lead">위 작업물을 보시고 "저건 장비가 좋아야 하는 거 아닌가" 생각하셨다면, 그 부분은 걱정 안 하셔도 됩니다.</p>
-    <p><strong>교육용 고성능 노트북을 1인 1대 무상으로 대여</strong>해 드립니다. 언리얼엔진이나 Cinema 4D는 일반 노트북으로 작업이 버겁습니다. 장비 때문에 시작을 못 하는 상황은 없도록 하기 위한 지원입니다.</p>
-    <p>수업은 실시간 비대면이라 지역 제한도 없습니다. 학원까지 이동할 필요 없이 집에서 그대로 참여합니다.</p>
-    <p class="muted">※ 부품 수급에 따라 사양이 달라질 수 있어, 현재 지급 중인 모델 사양은 상담 시 그대로 알려드립니다.</p>
-  </div>
-</section>
 
-<!-- ══ 시간 (필터) ══ -->
-<section>
-  <div class="wrap">
-    <div class="eyebrow">가장 중요한 조건</div>
-    <h2>대신, 6개월을 통으로 비워야 합니다</h2>
-    <p><strong>월~금 09:30 ~ 18:20, 전일제입니다. 실시간 참여가 필수입니다.</strong></p>
-    <p>그래서 솔직하게 말씀드리면 <strong>재직 중이거나 재학 중이신 분은 병행이 어렵습니다.</strong></p>
-    <div class="callout">
-      <p>"녹화본으로 따라가면 되지 않나요"라고 물으시는 분들이 계신데, 다시보기는 복습용이지 출석을 대체하지 않습니다.</p>
-      <p><strong>앞에서 보신 결과물은 6개월을 온전히 쓴 사람들이 만든 겁니다.</strong></p>
+    <div class="feats">
+      <div class="feat">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V20h14V9.5"/><path d="M9.5 20v-6h5v6"/></svg></div>
+        <b>집에서 그대로</b><span>학원 이동 시간 0분<br>실시간 비대면 수업</span>
+      </div>
+      <div class="feat">
+        <div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M2 20h20"/></svg></div>
+        <b>노트북 무상 대여</b><span>고성능 1인 1대<br>보증금·비용 없음</span>
+      </div>
+      <div class="feat">
+        <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18"/></svg></div>
+        <b>전국 어디서나</b><span>지역 제한 없음<br>다시보기 제공</span>
+      </div>
     </div>
+
+    <p style="margin-top:22px">언리얼엔진이나 Cinema 4D는 일반 노트북으로 작업이 버겁습니다. <strong>장비 때문에 시작을 못 하는 상황은 없도록</strong> 하기 위한 지원입니다.</p>
+    <p class="muted">※ 부품 수급에 따라 사양이 달라질 수 있어, 현재 지급 중인 모델 사양은 상담 시 안내해 드립니다.</p>
   </div>
 </section>
 
@@ -316,15 +576,43 @@ footer{padding:34px 0 40px;font-size:14px;color:var(--muted);text-align:center;l
   <div class="wrap">
     <div class="eyebrow">수료 후</div>
     <h2>6개월 뒤, 어디로 이어지나</h2>
-    <ul>
-      <li><b>인턴십 — 기수별 우수교육생 상위 20% 확정</b><br>
-        <span class="muted">국내 MBC+, 덱스터, 자이언트스텝, 스토익엔터테인먼트 / 해외 팀랩, 360채널 등 (2~3개월)</span></li>
-      <li><b>일본 기업 연수 — 3박 4일</b><br>
-        <span class="muted">커버, 토헤이, 팀랩, 코나미, 히키, TV아사히</span></li>
-      <li><b>채용 가산점</b><br>
-        <span class="muted">MBC플러스 신규 채용 · LG전자 VP사업부문 지원 시</span></li>
-      <li><b>협약 기업 170여 개 채용 연계</b></li>
-    </ul>
+    <div class="tl">
+      <div class="step">
+        <div class="when">0개월</div>
+        <div class="what">시작</div>
+        <p class="desc">대부분 비전공자로 시작합니다. 노트북을 받고 기초부터 들어갑니다.</p>
+      </div>
+      <div class="step">
+        <div class="when">6개월</div>
+        <div class="what">수료 · 포트폴리오 완성</div>
+        <p class="desc">앞에서 보신 수준의 작업물이 본인 이름으로 남습니다.</p>
+      </div>
+      <div class="step gold">
+        <div class="when">수료 직후 · 우수교육생 상위 20%</div>
+        <div class="what">인턴십 확정 (2~3개월)</div>
+        <div class="chips">
+          <span>MBC+</span><span>덱스터</span><span>자이언트스텝</span>
+          <span>스토익엔터테인먼트</span><span>팀랩</span><span>360채널</span>
+        </div>
+      </div>
+      <div class="step gold">
+        <div class="when">우수교육생 특전</div>
+        <div class="what">일본 기업 연수 (3박 4일)</div>
+        <p class="desc">국내 국비지원 과정에서 보기 드문 특전입니다. 실제로 일본 현지 기업을 방문합니다.</p>
+      </div>
+      <div class="step">
+        <div class="when">채용</div>
+        <div class="what">협약 기업 170여 곳 연계 · 채용 가산점</div>
+        <p class="desc">MBC플러스 신규 채용, LG전자 VP사업부문 지원 시 가산점이 부여됩니다.</p>
+      </div>
+    </div>
+
+    <div class="jp">
+      <div class="jptag">우수교육생 특전</div>
+      <div class="jph">일본 기업 연수 · 3박 4일</div>
+      <div class="jpd">국내 국비지원 과정에서 흔치 않은 특전입니다.<br>아래 기업들을 실제로 방문합니다.</div>
+      <div class="jplogos" id="jplogos"></div>
+    </div>
     <div class="callout">
       <p><strong>인턴십은 상위 20% 확정이고, 전원 보장이 아닙니다.</strong></p>
       <p>"수료하면 취업된다"고 말씀드리지 않습니다. 성과를 낸 교육생이 갈 수 있는 자리를 실제로 확보해두고 있다는 뜻입니다.</p>
@@ -337,20 +625,47 @@ footer{padding:34px 0 40px;font-size:14px;color:var(--muted);text-align:center;l
   <div class="wrap">
     <div class="eyebrow">누가 가르치나</div>
     <h2>강사진</h2>
-    <ul>
-      <li><b>정주익</b> · <b>김기봉</b> · <b>박윤정</b> — Cinema 4D, 언리얼엔진</li>
-      <li><b>장정현</b> — Blender, 언리얼엔진</li>
-      <li><b>이재원</b> — 언리얼엔진</li>
-    </ul>
-    <p>현장 실무 프로젝트 70편 이상, 대학 특강 경력을 보유한 강사진이 MBC플러스 KDT 과정을 담당합니다.</p>
-    <p>그리고 수업은 강사 혼자 진행하지 않습니다. <strong>운영팀 · 기술멘토 · 교육멘토</strong>가 함께 붙습니다. 비전공자 비중이 높은 과정이라, 진도를 놓쳤을 때 잡아주는 사람이 반드시 필요하기 때문입니다.</p>
+    <div class="tcs">
+      <div class="tc"><div class="av">정</div><div class="nm">정주익</div><div class="sb">Cinema 4D<br>언리얼엔진</div></div>
+      <div class="tc"><div class="av">김</div><div class="nm">김기봉</div><div class="sb">Cinema 4D<br>언리얼엔진</div></div>
+      <div class="tc"><div class="av">장</div><div class="nm">장정현</div><div class="sb">Blender<br>언리얼엔진</div></div>
+      <div class="tc"><div class="av">박</div><div class="nm">박윤정</div><div class="sb">Cinema 4D<br>언리얼엔진</div></div>
+      <div class="tc"><div class="av">이</div><div class="nm">이재원</div><div class="sb">언리얼엔진</div></div>
+    </div>
+    <p style="margin-top:22px">현장 실무 프로젝트 <strong>70편 이상</strong>, 대학 특강 경력을 보유한 강사진이 MBC플러스 KDT 과정을 담당합니다.</p>
 
-    <h3 style="margin-top:36px">수강생들이 남긴 말</h3>
-    <p class="muted">각색하지 않고 그대로 옮깁니다.</p>
-    <blockquote>"이런 퀄리티의 강의를 이렇게 아무런 조건 없이 집에서 수강"</blockquote>
-    <blockquote>"강사님만 계실 줄 알았지만 운영팀, 기술멘토, 교육멘토 등 다양한 분들이 학생분들을 케어"</blockquote>
-    <blockquote>"비전공자로써 열심히 수업진도를 따라가면서도 최종과제시 어느정도의 능력 향상"</blockquote>
-    <blockquote>"6개월간의 시간이 전혀 아깝지 않게 느껴졌어요"</blockquote>
+    <div class="feats" style="margin-top:20px">
+      <div class="feat">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 19V7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12"/><path d="M4 19h16M9 9h6M9 13h6"/></svg></div>
+        <b>운영팀</b><span>출결·행정·상담</span>
+      </div>
+      <div class="feat">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M8 8 4 12l4 4M16 8l4 4-4 4M13.5 6l-3 12"/></svg></div>
+        <b>기술멘토</b><span>막힌 작업 해결</span>
+      </div>
+      <div class="feat">
+        <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-3.5 3.1-6 7-6s7 2.5 7 6"/></svg></div>
+        <b>교육멘토</b><span>진도 관리</span>
+      </div>
+    </div>
+    <p class="muted" style="text-align:center;margin-top:14px">수업은 강사 혼자 진행하지 않습니다. 비전공자 비중이 높은 과정이라,<br>진도를 놓쳤을 때 잡아주는 사람이 반드시 필요하기 때문입니다.</p>
+
+  </div>
+</section>
+
+<!-- ══ 후기 ══ -->
+<section class="rev">
+  <div class="wrap">
+    <div class="eyebrow">실제 수강 후기</div>
+    <h2>먼저 다녀간 사람들의 말</h2>
+    <p class="sub">각색하지 않고 그대로 옮깁니다.</p>
+    <div class="qs">
+      <div class="qc big"><p>제 인생에서<br>가장 성공적인 투자</p></div>
+      <div class="qc"><p>이런 퀄리티의 강의를 이렇게 아무런 조건 없이 집에서 수강</p></div>
+      <div class="qc"><p>강사님만 계실 줄 알았지만 운영팀, 기술멘토, 교육멘토 등 다양한 분들이 학생분들을 케어</p></div>
+      <div class="qc"><p>비전공자로써 열심히 수업진도를 따라가면서도 최종과제시 어느정도의 능력 향상</p></div>
+      <div class="qc"><p>6개월간의 시간이 전혀 아깝지 않게 느껴졌어요</p></div>
+    </div>
   </div>
 </section>
 
@@ -359,27 +674,48 @@ footer{padding:34px 0 40px;font-size:14px;color:var(--muted);text-align:center;l
   <div class="wrap">
     <div class="eyebrow">솔직하게</div>
     <h2>이런 분께는 권하지 않습니다</h2>
-    <ul class="no">
-      <li><b>직장이나 학교와 병행하려는 분</b><br><span class="muted">평일 09:30~18:20 전일제, 실시간 참여 필수</span></li>
-      <li><b>영상편집 기술만 빠르게 익히고 싶은 분</b><br><span class="muted">3D 제작 비중이 큽니다</span></li>
-      <li><b>숏폼영상제작 위주로만 배우고 싶은 분</b><br><span class="muted">방송 콘텐츠 제작 프로세스 기반 과정입니다</span></li>
-      <li><b>과거 KDT 과정 수강 이력이 있는 분</b><br><span class="muted">참여가 제한될 수 있습니다</span></li>
-    </ul>
-    <div class="callout">
-      <p>반대로 <strong>비전공자여도, 3D모델링을 처음 만져봐도 괜찮습니다.</strong> 앞에서 보신 작업물을 만든 사람들이 대부분 그랬습니다.</p>
+    <div class="fit">
+      <div class="fitbox no">
+        <div class="ttl"><em>✕</em>권하지 않습니다</div>
+        <ul>
+          <li>직장·학교와 병행하려는 분<small>평일 09:30~18:20 전일제, 실시간 참여 필수</small></li>
+          <li>영상편집만 빠르게 익히고 싶은 분<small>3D 제작 비중이 큽니다</small></li>
+          <li>숏폼영상제작 위주로 배우고 싶은 분<small>방송 콘텐츠 제작 프로세스 기반</small></li>
+          <li>과거 KDT 과정 수강 이력이 있는 분<small>참여가 제한될 수 있습니다</small></li>
+        </ul>
+      </div>
+      <div class="fitbox ok">
+        <div class="ttl"><em>✓</em>이런 분께 맞습니다</div>
+        <ul>
+          <li>비전공자, 3D를 처음 만져보는 분<small>수료생 대부분이 그랬습니다</small></li>
+          <li>6개월을 온전히 쓸 수 있는 분<small>가장 중요한 조건입니다</small></li>
+          <li>편집을 넘어 제작까지 하고 싶은 분<small>기획부터 결과물까지 한 흐름</small></li>
+          <li>지방에 계신 분<small>전국 어디서나 집에서 수강</small></li>
+        </ul>
+      </div>
     </div>
 
-    <h3 style="margin-top:36px">검색해서 들어오신 분들께</h3>
-    <div class="qa"><p class="q">「내일배움카드로배울수있는것」</p>
-      <p class="a">3D모델링, AI영상제작, 모션그래픽, 영상편집을 함께 배웁니다.</p></div>
-    <div class="qa"><p class="q">「국비지원영상편집」 「영상편집국비지원」 「내일배움카드영상편집」</p>
-      <p class="a">영상편집만 배우는 과정은 아닙니다. 3D 비중이 큽니다.</p></div>
-    <div class="qa"><p class="q">「내일배움카드온라인」</p>
-      <p class="a">실시간 비대면입니다. 전국 어디서나 집에서 수강하실 수 있습니다.</p></div>
-    <div class="qa"><p class="q">「국비지원AI」 「AI영상편집」</p>
-      <p class="a">Midjourney 같은 생성형 AI를 실제 제작 흐름 안에서 사용합니다.</p></div>
-    <div class="qa"><p class="q">「국비지원취업」</p>
-      <p class="a">"수료하면 취업된다"고 말씀드리지 않습니다. 실제 구조는 위에 적어두었습니다.</p></div>
+  </div>
+</section>
+
+<!-- ══ FAQ ══ -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">망설이시는 이유</div>
+    <h2>가장 많이 묻는 것들</h2>
+
+    <details class="faq2" open><summary>비전공자인데 따라갈 수 있나요?</summary>
+      <div class="ans">앞에서 보신 작업물을 만든 수료생 대부분이 비전공자였습니다. 그래서 강사 외에 <strong>기술멘토·교육멘토</strong>가 따로 붙습니다. 못 따라오는 사람이 나오는 게 저희에게 가장 손해입니다.</div></details>
+    <details class="faq2"><summary>상담받으면 계속 전화 오나요?</summary>
+      <div class="ans">아닙니다. 한 번 안내드리고, <strong>결정은 본인이 편하실 때 하시면 됩니다.</strong> 조건이 안 맞는 분께는 저희가 먼저 다른 과정을 권해드립니다.</div></details>
+    <details class="faq2"><summary>내일배움카드가 아직 없는데요?</summary>
+      <div class="ans">괜찮습니다. 발급은 온라인으로 가능하고, 절차를 안내해 드립니다. <strong>카드가 없어도 상담은 가능</strong>합니다.</div></details>
+    <details class="faq2"><summary>노트북, 정말 무료인가요?</summary>
+      <div class="ans">교육 기간 동안 <strong>1인 1대 무상 대여</strong>입니다. 별도 비용도, 보증금도 없습니다.</div></details>
+    <details class="faq2"><summary>지방에 사는데 가능한가요?</summary>
+      <div class="ans">전 과정 실시간 비대면입니다. <strong>지역 제한이 없습니다.</strong> 실제로 전국에서 수강하고 계십니다.</div></details>
+    <details class="faq2"><summary>지금 지원하면 언제 시작하나요?</summary>
+      <div class="ans">가장 가까운 기수 일정과 남은 자리를 안내해 드립니다. <strong>기수는 정원이 차면 마감</strong>되고, 다음 기수는 몇 달 뒤입니다.</div></details>
   </div>
 </section>
 
@@ -388,12 +724,19 @@ footer{padding:34px 0 40px;font-size:14px;color:var(--muted);text-align:center;l
   <div class="wrap">
     <div class="eyebrow">상담 신청</div>
     <h2>조건만 확인해 드립니다</h2>
-    <p class="lead" style="color:#C6D2E4">이름과 연락처만 남겨주시면, 본인 기준으로 실제 부담금과 장려금을 계산해서 알려드립니다.<br>
+    <p class="lead" style="color:#C6D2E4">이름과 연락처만 남겨주시면 됩니다.<br>
     <strong style="color:#fff">상담만 받고 지원하지 않으셔도 전혀 문제 없습니다.</strong></p>
+
+    <div class="urgent">
+      <div class="h">가장 가까운 개강 일정</div>
+      <div class="row"><span>생성형 AI &amp; 언리얼엔진 미디어 콘텐츠 크리에이터</span><b>9월 10일 예정</b></div>
+      <div class="row"><span>리얼타임엔진 기반 AI Media Craft</span><b>10월 1일 예정</b></div>
+      <div class="row" style="color:#7A4E0C;font-weight:700">기수별 정원이 정해져 있어 조기 마감될 수 있습니다.</div>
+    </div>
 
     <ol class="steps" style="max-width:520px">
       <li style="color:#C6D2E4"><b style="color:#fff">연락 주십니다.</b> 궁금한 것만 물어보셔도 됩니다.</li>
-      <li style="color:#C6D2E4"><b style="color:#fff">조건을 확인합니다.</b> 카드 발급 여부·KDT 이력·장려금 대상을 확인해 실제 금액을 계산합니다.</li>
+      <li style="color:#C6D2E4"><b style="color:#fff">조건을 확인합니다.</b> 카드 발급 여부와 수강 이력을 확인해 지원 가능 여부를 알려드립니다.</li>
       <li style="color:#C6D2E4"><b style="color:#fff">과정을 안내드립니다.</b> 커리큘럼, 시간표, 노트북 지원 내용.</li>
       <li style="color:#C6D2E4"><b style="color:#fff">결정은 나중에 하셔도 됩니다.</b></li>
     </ol>
@@ -461,19 +804,31 @@ footer{padding:34px 0 40px;font-size:14px;color:var(--muted);text-align:center;l
 <script>
 /* ── 포트폴리오 데이터: 여기만 고치면 갤러리가 바뀝니다 ── */
 var FOLIO = [
-  {id:"KRNbxHoy560", t:"FURY OF FLAME",   n:"1기 유은상"},
   {id:"Q4iEB4HeyyY", t:"Demon Unleashed", n:"3기 한광범"},
   {id:"7Lq2s3cw0yM", t:"산나비",           n:"3기 김진용"},
   {id:"IBO2ihqdVnc", t:"GUNDAM",          n:"1기 김태양"},
   {id:"echsvok-HbY", t:"타락한 천사",       n:"7기 이혜영"},
-  {id:"aSX52ueVEsU", t:"pirate",          n:"4기 소연섭"},
   {id:"C0qsKx8HQFc", t:"모노노케히메",      n:"2기 신대훈"},
-  {id:"7Myt3Z7TfOo", t:"LETHAL Company",  n:"1기 최수빈"},
-  {id:"AOYBdKzu9VE", t:"델마",             n:"1기 김고은"},
   {id:"k30z6OTyDXA", t:"마녀2",            n:"1기 추강민"},
+  {id:"7Myt3Z7TfOo", t:"LETHAL Company",  n:"1기 최수빈"},
   {id:"btu8TAP09rA", t:"전면",             n:"5기 안광한"},
-  {id:"k48i2bR44HY", t:"동그라미 관찰일기",  n:"8기 이사명"}
+  {id:"AOYBdKzu9VE", t:"델마",             n:"1기 김고은"}
 ];
+
+/* 일본 파트너사 로고 — 이미지가 안 뜨면 회사명 텍스트로 자동 대체됩니다 */
+var JP = [
+  ['cover','커버'], ['toei','토에이'], ['teamlab','팀랩'],
+  ['konami','코나미'], ['hikky','히키'], ['asahi','TV아사히']
+];
+var jw = document.getElementById('jplogos');
+JP.forEach(function(v){
+  var d = document.createElement('div');
+  d.className = 'jplogo';
+  d.innerHTML = '<img src="https://studio.mbcplus-learning.com/img/index/'+v[0]+
+    '.png" alt="'+v[1]+'" onerror="this.style.display=\'none\';this.parentNode.classList.add(\'txt\');">'+
+    '<span>'+v[1]+'</span>';
+  jw.appendChild(d);
+});
 
 var g = document.getElementById('folioGrid');
 FOLIO.forEach(function(v){
