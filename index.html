@@ -304,19 +304,19 @@ ol.steps li::before{content:counter(s);position:absolute;left:0;top:2px;width:26
 /* ── FIT / NOT FIT ──────────────────── */
 .fit{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:22px}
 .fitbox{border-radius:15px;padding:22px 20px}
-.fitbox.no{background:#FDF3F3;border:1px solid #F2D7D6}
+.fitbox.no{background:#FFFaF1;border:1px solid #EEDFC2}
 .fitbox.ok{background:#EEF8F4;border:1px solid #CFE9DF}
 .fitbox .ttl{font-size:16.5px;font-weight:800;margin-bottom:12px;display:flex;align-items:center;gap:8px}
-.fitbox.no .ttl{color:#A83B36}
+.fitbox.no .ttl{color:#8A5A12}
 .fitbox.ok .ttl{color:#0F7A5C}
 .fitbox .ttl em{font-style:normal;width:24px;height:24px;border-radius:50%;color:#fff;
   display:flex;align-items:center;justify-content:center;font-size:14px}
-.fitbox.no .ttl em{background:#C0453F}
+.fitbox.no .ttl em{background:#D79320}
 .fitbox.ok .ttl em{background:#0F7A5C}
 .fitbox ul{margin:0}
 .fitbox li{padding-left:16px;margin:9px 0;font-size:15px;color:#3E4C60}
 .fitbox li::before{width:5px;height:5px;top:10px;left:2px}
-.fitbox.no li::before{background:#C0453F}
+.fitbox.no li::before{background:#D79320}
 .fitbox.ok li::before{background:#0F7A5C}
 .fitbox li small{display:block;color:var(--muted);font-size:13px;margin-top:1px}
 
@@ -690,28 +690,30 @@ footer{padding:34px 0 40px;font-size:14px;color:var(--muted);text-align:center;l
 <section>
   <div class="wrap">
     <div class="eyebrow">솔직하게</div>
-    <h2>이런 분께는 권하지 않습니다</h2>
+    <h2>이 과정, 나에게 맞을까?</h2>
     <div class="fit">
-      <div class="fitbox no">
-        <div class="ttl"><em>✕</em>권하지 않습니다</div>
-        <ul>
-          <li>직장·학교와 병행하려는 분<small>평일 09:30~18:20 전일제, 실시간 참여 필수</small></li>
-          <li>영상편집만 빠르게 익히고 싶은 분<small>3D 제작 비중이 큽니다</small></li>
-          <li>숏폼영상제작 위주로 배우고 싶은 분<small>방송 콘텐츠 제작 프로세스 기반</small></li>
-          <li>과거 KDT 과정 수강 이력이 있는 분<small>참여가 제한될 수 있습니다</small></li>
-        </ul>
-      </div>
       <div class="fitbox ok">
         <div class="ttl"><em>✓</em>이런 분께 맞습니다</div>
         <ul>
-          <li>비전공자, 3D를 처음 만져보는 분<small>수료생 대부분이 그랬습니다</small></li>
-          <li>6개월을 온전히 쓸 수 있는 분<small>가장 중요한 조건입니다</small></li>
-          <li>편집을 넘어 제작까지 하고 싶은 분<small>기획부터 결과물까지 한 흐름</small></li>
+          <li>비전공자, 3D를 처음 만져보는 분<small>앞의 작업물을 만든 수료생 대부분이 그랬습니다</small></li>
+          <li>6개월을 온전히 쓸 수 있는 분<small>평일 낮에 집중하실 수 있다면</small></li>
+          <li>편집을 넘어 제작까지 하고 싶은 분<small>기획부터 결과물까지 한 흐름으로</small></li>
           <li>지방에 계신 분<small>전국 어디서나 집에서 수강</small></li>
+        </ul>
+      </div>
+      <div class="fitbox no">
+        <div class="ttl"><em>!</em>이런 경우엔 확인이 필요합니다</div>
+        <ul>
+          <li>직장·학교와 병행하려는 분<small>평일 09:30~18:20 전일제, 실시간 참여 필수</small></li>
+          <li>과거 KDT 과정 수강 이력이 있는 분<small>이력에 따라 다르니 확인이 필요합니다</small></li>
         </ul>
       </div>
     </div>
 
+    <div class="cta2" style="background:#FFF7EA;border-color:#F0DDB6">
+      <div class="t">해당되셔도 방법이 있을 수 있습니다. 이력과 일정에 따라 다르니 확인만 받아보세요.</div>
+      <a href="#apply">확인 요청하기</a>
+    </div>
   </div>
 </section>
 
