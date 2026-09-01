@@ -105,10 +105,19 @@ strong{font-weight:700;color:var(--navy)}
 
 /* lightbox */
 .lb{position:fixed;inset:0;background:rgba(4,9,16,.94);z-index:100;display:none;
-  align-items:center;justify-content:center;padding:20px}
+  align-items:center;justify-content:center;padding:20px;flex-direction:column}
 .lb.on{display:flex}
 .lb .frame{width:100%;max-width:940px;aspect-ratio:16/9;background:#000;border-radius:12px;overflow:hidden}
 .lb iframe{width:100%;height:100%;border:0;display:block}
+/* 브라우저·확장프로그램이 유튜브 임베드를 막는 경우가 있어 항상 대체 링크를 둡니다 */
+.lb .alt{width:100%;max-width:940px;margin-top:12px;display:flex;flex-wrap:wrap;
+  align-items:center;justify-content:space-between;gap:8px}
+.lb .alt .ttl{font-size:15px;font-weight:700;color:#fff;letter-spacing:-.02em}
+.lb .alt .ttl em{display:block;font-style:normal;font-size:12.5px;font-weight:600;
+  color:#9CADC6;margin-top:2px}
+.lb .alt a{flex:0 0 auto;background:#fff;color:#16294A;font-size:13.5px;font-weight:800;
+  text-decoration:none;padding:10px 16px;border-radius:9px}
+.lb .alt a:hover{background:#E8EEF8}
 .lb .x{position:absolute;top:18px;right:22px;color:#fff;font-size:34px;
   cursor:pointer;line-height:1;opacity:.8}
 
@@ -277,13 +286,53 @@ ol.steps li::before{content:counter(s);position:absolute;left:0;top:2px;width:26
 .rev .sub{color:#9CADC6;font-size:15px;margin-top:6px}
 
 /* ── TEACHERS ───────────────────────── */
-.tcs{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:22px}
-.tc{text-align:center}
-.tc .av{width:100%;aspect-ratio:1;border-radius:16px;display:flex;align-items:center;
-  justify-content:center;font-size:23px;font-weight:800;color:#fff;
-  background:linear-gradient(140deg,#2E4E86,#16294A);margin-bottom:8px}
-.tc .nm{font-size:14.5px;font-weight:800;color:var(--navy)}
-.tc .sb{font-size:11.5px;color:var(--muted);line-height:1.45;margin-top:1px}
+.tcs{display:grid;grid-template-columns:repeat(auto-fit,minmax(218px,1fr));gap:12px;margin-top:22px}
+.tc{background:var(--soft);border:1px solid var(--line);border-radius:14px;padding:18px 16px}
+.tc .hd{display:flex;align-items:center;gap:11px}
+.tc .av{flex:0 0 auto;width:46px;height:46px;border-radius:50%;display:flex;align-items:center;
+  justify-content:center;font-size:18px;font-weight:800;color:#fff;
+  background:linear-gradient(140deg,#2E4E86,#16294A)}
+.tc .nm{font-size:16px;font-weight:800;color:var(--navy);letter-spacing:-.02em}
+.tc .sb{font-size:11.5px;color:var(--accent);font-weight:700;line-height:1.45;margin-top:2px}
+.tc ul{margin:13px 0 0;padding-left:16px}
+.tc li{font-size:12.8px;color:#4A5A73;line-height:1.6;margin-bottom:4px}
+
+/* ── PARTNER LOGOS ──────────────────── */
+.plog{display:grid;grid-template-columns:repeat(6,1fr);gap:9px;margin-top:16px}
+.plog div{background:#fff;border:1px solid var(--line);border-radius:10px;height:58px;
+  display:flex;align-items:center;justify-content:center;padding:9px 11px}
+/* 협약사 로고에 흰색 버전이 섞여 있어 흰 배경에서 사라집니다.
+   전부 한 톤의 진회색으로 통일해 어떤 로고든 보이게 합니다. */
+.plog img{max-width:100%;max-height:100%;object-fit:contain;
+  filter:brightness(0) opacity(.82)}
+
+/* ── COMPANY CARDS ──────────────────── */
+.cos{display:grid;grid-template-columns:repeat(auto-fit,minmax(152px,1fr));gap:10px;margin-top:12px}
+.co{background:#fff;border:1px solid var(--line);border-radius:12px;padding:15px 12px;text-align:center}
+.co .lg{height:32px;display:flex;align-items:center;justify-content:center;margin-bottom:10px}
+.co .lg img{max-width:100%;max-height:100%;object-fit:contain}
+/* 덱스터 로고 파일만 흰색이라 흰 배경에서 사라집니다. 이 한 장만 반전 */
+.co .lg img.inv{filter:brightness(0) opacity(.78)}
+.co b{display:block;font-size:13.5px;color:var(--navy);letter-spacing:-.02em}
+.co span{display:block;font-size:11.5px;color:var(--muted);line-height:1.5;margin-top:4px}
+
+/* ── JAPAN COMPANY CARDS ────────────── */
+.jpco{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:22px}
+.jpc{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);
+  border-radius:12px;padding:13px 10px;text-align:center}
+.jpc .lg{background:#fff;border-radius:8px;height:44px;display:flex;
+  align-items:center;justify-content:center;padding:8px 10px}
+.jpc .lg img{max-width:100%;max-height:100%;object-fit:contain}
+.jpc b{display:block;font-size:13px;color:#fff;margin-top:9px;letter-spacing:-.02em}
+.jpc span{display:block;font-size:11px;color:#A7B8D0;line-height:1.5;margin-top:3px}
+
+/* ── APPLY PROCESS ──────────────────── */
+.proc{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:22px}
+.pstep{background:#fff;border:1px solid var(--line);border-radius:13px;padding:16px 14px}
+.pstep .no{width:26px;height:26px;border-radius:50%;background:var(--accent);color:#fff;
+  font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center}
+.pstep b{display:block;font-size:15px;color:var(--navy);margin-top:10px;letter-spacing:-.02em}
+.pstep span{display:block;font-size:12.8px;color:#4A5A73;line-height:1.6;margin-top:5px}
 
 /* ── QUOTES ─────────────────────────── */
 .qs{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:20px}
@@ -351,6 +400,18 @@ details.faq2 .ans{padding:0 18px 18px;font-size:15.5px;color:#3E4C60;line-height
 .btn.line{background:#fff;color:var(--accent);border:2px solid var(--accent);margin-top:10px}
 .note{font-size:13px;color:var(--muted);margin-top:12px;text-align:center}
 footer{padding:34px 0 40px;font-size:14px;color:var(--muted);text-align:center;line-height:2}
+.bizinfo{max-width:520px;margin:22px auto 0;padding:18px 20px;background:var(--soft);
+  border:1px solid var(--line);border-radius:12px;text-align:left;line-height:1.65}
+.bizinfo .bt{font-size:12.5px;font-weight:800;color:var(--navy);letter-spacing:.03em;
+  margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.bizinfo .br{display:flex;gap:12px;font-size:13px;margin:5px 0}
+.bizinfo .br span{flex:0 0 96px;color:var(--muted)}
+.bizinfo .br b{font-weight:600;color:#3E4C60}
+@media (max-width:520px){
+  .bizinfo{padding:16px}
+  .bizinfo .br{flex-direction:column;gap:1px;margin:9px 0}
+  .bizinfo .br span{flex:none;font-size:12px}
+}
 .sticky{position:fixed;left:0;right:0;bottom:0;background:rgba(11,22,38,.97);
   backdrop-filter:blur(8px);padding:11px 16px;display:flex;gap:9px;z-index:50}
 .sticky a{flex:1;text-align:center;padding:13px 8px;border-radius:10px;font-size:15px;
@@ -382,8 +443,17 @@ footer{padding:34px 0 40px;font-size:14px;color:var(--muted);text-align:center;l
   .feat .ic{margin:0;flex:0 0 auto;width:42px;height:42px}
   .feat span{font-size:13px}
   .feat .fx{min-width:0}
-  .tcs{grid-template-columns:repeat(3,1fr);gap:9px}
-  .tc .av{font-size:19px;border-radius:13px}
+  .tcs{grid-template-columns:1fr;gap:10px}
+  .tc{padding:16px 14px}
+  .plog{grid-template-columns:repeat(3,1fr);gap:8px}
+  .plog div{height:50px;padding:8px 10px}
+  .cos{grid-template-columns:repeat(2,1fr);gap:9px}
+  .jpco{grid-template-columns:repeat(2,1fr);gap:9px}
+  .proc{grid-template-columns:repeat(2,1fr);gap:9px}
+  .pstep{padding:14px 12px}
+  .pstep b{font-size:14px}
+  .lb .alt{flex-direction:column;align-items:stretch}
+  .lb .alt a{text-align:center;padding:13px 16px}
   .qs{grid-template-columns:1fr}
   .qc.big p{font-size:17.5px}
   .rev .qc.big p{font-size:20px}
@@ -551,7 +621,7 @@ footer{padding:34px 0 40px;font-size:14px;color:var(--muted);text-align:center;l
     <div class="box green">
       <div class="lbl">받는 돈</div>
       <div class="big">훈련장려금 월 최대 30만원</div>
-      <div class="sub">국민취업지원제도 1유형 대상자는 월 최대 81만원</div>
+      <div class="sub">국민취업지원제도 1유형 대상자는 <strong>월 최대 81만원</strong><br>6개월 과정이므로 조건이 맞으면 총액이 자비부담금을 넘어섭니다</div>
     </div>
     <p class="muted">※ 장려금은 지역·유형에 따라 달라집니다. 자세한 내용은 상담 시 안내해 드립니다.</p>
     <p class="muted">※ 「국비지원 무료교육」으로 검색해 오셨다면 — 완전 무료는 아닙니다. 위 금액이 실제 조건입니다.</p>
@@ -607,9 +677,12 @@ footer{padding:34px 0 40px;font-size:14px;color:var(--muted);text-align:center;l
       <div class="step gold">
         <div class="when">수료 직후 · 우수교육생 상위 20%</div>
         <div class="what">인턴십 확정 (2~3개월)</div>
-        <div class="chips">
-          <span>MBC+</span><span>덱스터</span><span>자이언트스텝</span>
-          <span>스토익엔터테인먼트</span><span>팀랩</span><span>360채널</span>
+        <div class="cos">
+          <div class="co"><div class="lg"><img loading="lazy" src="https://studio.mbcplus-learning.com/img/index/mbcplus.png" alt="MBC플러스" onerror="this.parentNode.style.display='none'"></div><b>MBC플러스</b><span>본 과정의 주관사인 방송사</span></div>
+          <div class="co"><div class="lg"><img loading="lazy" class="inv" src="https://studio.mbcplus-learning.com/img/index/dexter_w.png" alt="덱스터 스튜디오" onerror="this.parentNode.style.display='none'"></div><b>덱스터 스튜디오</b><span>VFX를 필두로 한 아시아 기술력 규모의 제작 스튜디오</span></div>
+          <div class="co"><div class="lg"><img loading="lazy" src="https://studio.mbcplus-learning.com/img/index/giantstep.png" alt="자이언트스텝" onerror="this.parentNode.style.display='none'"></div><b>자이언트스텝</b><span>버추얼 휴먼·XR 콘텐츠 크리에이티브 테크 기업</span></div>
+          <div class="co"><div class="lg"><img loading="lazy" src="https://studio.mbcplus-learning.com/img/index/stoic.png" alt="스토익엔터테인먼트" onerror="this.parentNode.style.display='none'"></div><b>스토익엔터테인먼트</b><span>가상현실 게임·메타버스 VR 콘텐츠 개발사</span></div>
+          <div class="co"><div class="lg"><img loading="lazy" src="https://studio.mbcplus-learning.com/img/index/teamlab.png" alt="팀랩" onerror="this.parentNode.style.display='none'"></div><b>팀랩(teamLab)</b><span>경계와 국경을 허무는 아트 컬렉티브</span></div>
         </div>
       </div>
       <div class="step gold">
@@ -624,11 +697,17 @@ footer{padding:34px 0 40px;font-size:14px;color:var(--muted);text-align:center;l
       </div>
     </div>
 
+    <div style="margin-top:26px">
+      <p class="muted" style="text-align:center;font-weight:800;color:var(--navy);font-size:16px">주요 채용 협약 기업</p>
+      <div class="plog" id="plogos"></div>
+      <p class="muted" style="text-align:right;margin-top:9px;font-size:12.5px">외 170여 개사와 채용 연계</p>
+    </div>
+
     <div class="jp">
       <div class="jptag">우수교육생 특전</div>
       <div class="jph">일본 기업 연수 · 3박 4일</div>
       <div class="jpd">국내 국비지원 과정에서 흔치 않은 특전입니다.<br>아래 기업들을 실제로 방문합니다.</div>
-      <div class="jplogos" id="jplogos"></div>
+      <div class="jpco" id="jplogos"></div>
     </div>
     <div class="callout">
       <p><strong>인턴십은 상위 20% 확정이고, 전원 보장이 아닙니다.</strong></p>
@@ -643,13 +722,59 @@ footer{padding:34px 0 40px;font-size:14px;color:var(--muted);text-align:center;l
     <div class="eyebrow">누가 가르치나</div>
     <h2>강사진</h2>
     <div class="tcs">
-      <div class="tc"><div class="av">정</div><div class="nm">정주익</div><div class="sb">Cinema 4D<br>언리얼엔진</div></div>
-      <div class="tc"><div class="av">김</div><div class="nm">김기봉</div><div class="sb">Cinema 4D<br>언리얼엔진</div></div>
-      <div class="tc"><div class="av">장</div><div class="nm">장정현</div><div class="sb">Blender<br>언리얼엔진</div></div>
-      <div class="tc"><div class="av">박</div><div class="nm">박윤정</div><div class="sb">Cinema 4D<br>언리얼엔진</div></div>
-      <div class="tc"><div class="av">이</div><div class="nm">이재원</div><div class="sb">언리얼엔진</div></div>
+      <div class="tc">
+        <div class="hd"><div class="av">정</div><div><div class="nm">정주익</div><div class="sb">Cinema 4D · 언리얼엔진</div></div></div>
+        <ul>
+          <li>MBC플러스 KDT과정 담당</li>
+          <li>MBC HRD 언리얼엔진 과정 강사</li>
+          <li>현 메모리아 실장</li>
+          <li>커머셜·전시·공연 등 현장 실무 프로젝트 70편 이상</li>
+          <li>EBS XR 우주대기획 〈더 홈〉 10부작</li>
+          <li>C4D Korea 교육 / 기술과장</li>
+        </ul>
+      </div>
+      <div class="tc">
+        <div class="hd"><div class="av">김</div><div><div class="nm">김기봉</div><div class="sb">Cinema 4D · 언리얼엔진</div></div></div>
+        <ul>
+          <li>MBC플러스 KDT과정 담당</li>
+          <li>〈크리에이티브 CINEMA 4D〉 저자</li>
+          <li>SADI · 숙명여자대학교 3D Motion 출강</li>
+          <li>가천대 · 한예종 무대연출학과 특강</li>
+          <li>이너모션 스쿨 운영, 멀티버스 콘텐츠 제작 (Blender / Unreal)</li>
+        </ul>
+      </div>
+      <div class="tc">
+        <div class="hd"><div class="av">장</div><div><div class="nm">장정현</div><div class="sb">Blender · 언리얼엔진</div></div></div>
+        <ul>
+          <li>MBC플러스 KDT과정 담당</li>
+          <li>coloso Cinema 4D · Blender · Adobe 멘토링 (23~24년)</li>
+          <li>메가스터디 컴퓨터아카데미 2D·3D 모션 강사</li>
+          <li>닉플레이스 NFT 3D 콘텐츠 제작</li>
+          <li>미소정보기술 미디어 파사드 콘텐츠 제작</li>
+        </ul>
+      </div>
+      <div class="tc">
+        <div class="hd"><div class="av">박</div><div><div class="nm">박윤정</div><div class="sb">Cinema 4D · 언리얼엔진</div></div></div>
+        <ul>
+          <li>MBC플러스 KDT과정 담당</li>
+          <li>MBC HRD Cinema 4D 과정 강사</li>
+          <li>메가스터디 컴퓨터아카데미 2D·3D 모션 강사</li>
+          <li>SeSAC(서울소프트웨어아카데미) 모션그래픽 담당 강사</li>
+          <li>인테리어 디자인설계팀 3D 모델링 담당</li>
+        </ul>
+      </div>
+      <div class="tc">
+        <div class="hd"><div class="av">이</div><div><div class="nm">이재원</div><div class="sb">언리얼엔진</div></div></div>
+        <ul>
+          <li>MBC플러스 KDT과정 담당</li>
+          <li>추계예술대학교 · 대전정보산업진흥원 · ARTX 언리얼엔진 출강</li>
+          <li>Shotvision Co. 언리얼엔진 엔지니어</li>
+          <li>독일 Robert Bosch GmbH, Hamm GmbH 솔루션 엔지니어</li>
+        </ul>
+      </div>
     </div>
-    <p class="muted" style="text-align:center;margin-top:16px">현장 실무 프로젝트 <strong>70편 이상</strong>을 보유한 강사진이 담당합니다.</p>
+    <p class="muted" style="text-align:center;margin-top:16px">현장 실무 프로젝트 <strong>70편 이상</strong>을 보유한 강사진이 담당합니다.<br>
+    <strong>다섯 명 모두 MBC플러스 KDT과정 전담 강사</strong>입니다.</p>
 
     <div class="feats" style="margin-top:20px">
       <div class="feat">
@@ -738,6 +863,47 @@ footer{padding:34px 0 40px;font-size:14px;color:var(--muted);text-align:center;l
   </div>
 </section>
 
+<!-- ══ 지원 절차 ══ -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">지원부터 수강까지</div>
+    <h2>아무나 받는 과정은 아닙니다</h2>
+    <p class="lead">상담 신청이 곧 등록은 아닙니다. <strong>입과지원서와 인성면접을 거쳐 훈련생을 선발</strong>합니다.<br>
+    아래 1단계가 지금 하실 수 있는 전부입니다.</p>
+
+    <div class="proc">
+      <div class="pstep">
+        <div class="no">1</div>
+        <b>상담 신청</b>
+        <span>아래 폼에 이름과 연락처만 남기시면 됩니다. 여기까지가 오늘 하실 일입니다.</span>
+      </div>
+      <div class="pstep">
+        <div class="no">2</div>
+        <b>전화 상담 · 입과지원서 제출</b>
+        <span>유선으로 과정을 안내드리고, 안내에 따라 입과지원서를 작성해 메일로 접수하십니다.</span>
+      </div>
+      <div class="pstep">
+        <div class="no">3</div>
+        <b>인성 면접 전형</b>
+        <span>지원서 제출자를 대상으로 인성면접을 진행합니다. 일정은 접수 후 개별 안내드립니다.</span>
+      </div>
+      <div class="pstep">
+        <div class="no">4</div>
+        <b>최종 훈련생 선발</b>
+        <span>합격자에게 수강 안내를 드리고, HRD-Net 수강신청과 노트북 발송이 진행됩니다.</span>
+      </div>
+    </div>
+
+    <p class="muted" style="text-align:center;margin-top:16px">면접이라고 해서 긴장하지 않으셔도 됩니다.<br>
+    <strong>기술을 보는 자리가 아니라, 6개월을 끝까지 다닐 분인지 확인하는 자리</strong>입니다.</p>
+
+    <div class="cta2">
+      <div class="t">1단계부터 시작하시면 됩니다</div>
+      <a href="#apply">상담 신청</a>
+    </div>
+  </div>
+</section>
+
 <!-- ══ FORM ══ -->
 <section id="apply">
   <div class="wrap">
@@ -747,10 +913,10 @@ footer{padding:34px 0 40px;font-size:14px;color:var(--muted);text-align:center;l
     <strong style="color:#fff">상담만 받고 지원하지 않으셔도 전혀 문제 없습니다.</strong></p>
 
     <div class="urgent">
-      <div class="h">가장 가까운 개강 일정</div>
-      <div class="row"><span>생성형 AI &amp; 언리얼엔진 미디어 콘텐츠 크리에이터</span><b>9월 10일 예정</b></div>
-      <div class="row"><span>리얼타임엔진 기반 AI Media Craft</span><b>10월 1일 예정</b></div>
-      <div class="row" style="color:#7A4E0C;font-weight:700">기수별 정원이 정해져 있어 조기 마감될 수 있습니다.</div>
+      <div class="h">현재 모집 중인 과정</div>
+      <div class="row"><span>생성형 AI &amp; 언리얼엔진 미디어 콘텐츠 크리에이터</span><b>모집 중</b></div>
+      <div class="row"><span>리얼타임엔진 기반 AI Media Craft</span><b>모집 중</b></div>
+      <div class="row" style="color:#7A4E0C;font-weight:700">기수별 정원이 정해져 있어 조기 마감될 수 있습니다. 가장 가까운 개강일과 남은 자리는 상담 시 안내드립니다.</div>
     </div>
 
     <ol class="steps" style="max-width:520px">
@@ -774,6 +940,13 @@ footer{padding:34px 0 40px;font-size:14px;color:var(--muted);text-align:center;l
         <input id="nm" name="name" type="text" required autocomplete="name" placeholder="홍길동">
         <label for="ph">연락처</label>
         <input id="ph" name="phone" type="tel" required autocomplete="tel" inputmode="numeric" placeholder="010-0000-0000">
+        <label for="cs">희망 과정</label>
+        <select id="cs" name="course">
+          <option value="아직 정하지 못했습니다">아직 정하지 못했습니다</option>
+          <option value="생성형 AI &amp; 언리얼엔진 미디어 콘텐츠 크리에이터">생성형 AI &amp; 언리얼엔진 미디어 콘텐츠 크리에이터</option>
+          <option value="리얼타임엔진 기반 AI Media Craft">리얼타임엔진 기반 AI Media Craft</option>
+        </select>
+
         <label for="cd">국민내일배움카드</label>
         <select id="cd" name="card">
           <option>발급받았습니다</option>
@@ -802,12 +975,25 @@ footer{padding:34px 0 40px;font-size:14px;color:var(--muted);text-align:center;l
   <div class="wrap">
     <strong style="color:var(--navy)">MBC플러스 엠플러닝</strong><br>
     경기도 고양시 일산동구 호수로 596<br>
-    010-6781-3555 · lms001127@kakao.com<br>
+    문의 010-6781-3555 · lms001127@kakao.com<br>
     <a href="https://studio.mbcplus-learning.com" style="color:var(--accent)">studio.mbcplus-learning.com</a>
+
+    <div class="bizinfo">
+      <div class="bt">사업자 정보</div>
+      <div class="br"><span>상호</span><b>넥스트피닉스</b></div>
+      <div class="br"><span>대표자</span><b>임명선</b></div>
+      <div class="br"><span>사업자등록번호</span><b>769-27-01600</b></div>
+      <div class="br"><span>주소</span><b>인천광역시 서구 크리스탈로74번길 7-21, 7층 701-가16호<br>(청라동, 청라 더블유)</b></div>
+      <div class="br"><span>업태 · 종목</span><b>전문, 과학 및 기술서비스업 · 광고 대행업</b></div>
+    </div>
+
     <p class="muted" style="margin-top:18px;font-size:13px">
       본 과정은 고용노동부 K-Digital Training 훈련과정입니다.<br>
       자비부담금 및 훈련장려금은 개인 조건에 따라 달라질 수 있습니다.<br>
       게시된 포트폴리오는 교육생 개인의 학습 결과물입니다.
+    </p>
+    <p class="muted" style="margin-top:10px;font-size:12.5px">
+      &copy; 넥스트피닉스. All rights reserved.
     </p>
   </div>
 </footer>
@@ -817,7 +1003,13 @@ footer{padding:34px 0 40px;font-size:14px;color:var(--muted);text-align:center;l
   <a class="a2" href="tel:01067813555">전화 문의</a>
 </div>
 
-<div class="lb" id="lb"><span class="x" id="lbx">&times;</span><div class="frame" id="lbf"></div></div>
+<div class="lb" id="lb"><span class="x" id="lbx">&times;</span>
+  <div class="frame" id="lbf"></div>
+  <div class="alt">
+    <div class="ttl" id="lbt">작업물<em>재생이 안 되면 YouTube에서 바로 보실 수 있습니다</em></div>
+    <a id="lba" href="#" target="_blank" rel="noopener">YouTube에서 보기 ↗</a>
+  </div>
+</div>
 <iframe name="gfsink" style="display:none" title="submit"></iframe>
 
 <script>
@@ -834,19 +1026,35 @@ var FOLIO = [
   {id:"AOYBdKzu9VE", t:"델마",             n:"1기 김고은"}
 ];
 
-/* 일본 파트너사 로고 — 이미지가 안 뜨면 회사명 텍스트로 자동 대체됩니다 */
+/* 일본 연수 기업 — 로고 + 한 줄 소개 */
 var JP = [
-  ['cover','커버'], ['toei','토에이'], ['teamlab','팀랩'],
-  ['konami','코나미'], ['hikky','히키'], ['asahi','TV아사히']
+  ['toei',   '토에이 애니메이션', '세일러문·슬램덩크·드래곤볼 제작사'],
+  ['teamlab','팀랩(teamLab)',    '세계를 순회하는 아트 컬렉티브'],
+  ['konami', '코나미(KONAMI)',   '유희왕·비트매니아 게임 제작·판매'],
+  ['hikky',  '히키(HIKKY)',      'VR 메타버스 스타트업, 가상 도시 프로젝트'],
+  ['cover',  '커버(COVER)',      '버추얼 유튜버 홀로라이브 운영사'],
+  ['asahi',  'TV아사히',          '일본 지상파 방송사']
 ];
 var jw = document.getElementById('jplogos');
 JP.forEach(function(v){
   var d = document.createElement('div');
-  d.className = 'jplogo';
-  d.innerHTML = '<img src="https://studio.mbcplus-learning.com/img/index/'+v[0]+
-    '.png" alt="'+v[1]+'" onerror="this.style.display=\'none\';this.parentNode.classList.add(\'txt\');">'+
-    '<span>'+v[1]+'</span>';
+  d.className = 'jpc';
+  d.innerHTML = '<div class="lg"><img loading="lazy" src="https://studio.mbcplus-learning.com/img/index/'+
+    v[0]+'.png" alt="'+v[1]+'" onerror="this.parentNode.style.display=\'none\'"></div>'+
+    '<b>'+v[1]+'</b><span>'+v[2]+'</span>';
   jw.appendChild(d);
+});
+
+/* 채용 협약 기업 로고 */
+var PARTNERS = ['giantstep_w','dexter_w','luno','delicious','cle','buff','an','aixlab',
+  'inno','stoic','pocket','zenstem','visual_light','victoria','wefun','pudding',
+  'creative','tooni','hello','evr','sko','dcarrick','eggtart','sonew'];
+var pw = document.getElementById('plogos');
+if (pw) PARTNERS.forEach(function(n){
+  var d = document.createElement('div');
+  d.innerHTML = '<img loading="lazy" src="https://studio.mbcplus-learning.com/img/index/'+
+    n+'.png" alt="협약 기업" onerror="this.parentNode.remove()">';
+  pw.appendChild(d);
 });
 
 var g = document.getElementById('folioGrid');
@@ -857,16 +1065,22 @@ FOLIO.forEach(function(v){
     '<img loading="lazy" src="https://img.youtube.com/vi/'+v.id+'/hqdefault.jpg" alt="'+v.t+'">'+
     '<div class="veil"></div><div class="play"></div>'+
     '<div class="meta"><div class="t">'+v.t+'</div><div class="n">'+v.n+'</div></div>';
-  d.onclick = function(){ openLb(v.id); };
+  d.onclick = function(){ openLb(v); };
   g.appendChild(d);
 });
 
-var lb = document.getElementById('lb'), lbf = document.getElementById('lbf');
-function openLb(id){
-  lbf.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/'+id+
-    '?autoplay=1&rel=0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
+var lb  = document.getElementById('lb'), lbf = document.getElementById('lbf'),
+    lbt = document.getElementById('lbt'), lba = document.getElementById('lba');
+function openLb(v){
+  /* youtube-nocookie 는 일부 브라우저·확장에서 차단됩니다. 표준 도메인을 씁니다 */
+  lbf.innerHTML = '<iframe src="https://www.youtube.com/embed/'+v.id+
+    '?rel=0&playsinline=1" title="'+v.t+'" '+
+    'allow="accelerometer; autoplay; encrypted-media; picture-in-picture" '+
+    'referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';
+  lbt.innerHTML = v.t + '<em>' + v.n + ' · 재생이 안 되면 YouTube에서 바로 보실 수 있습니다</em>';
+  lba.href = 'https://www.youtube.com/watch?v=' + v.id;
   lb.classList.add('on');
-  try{ if(window.fbq) fbq('trackCustom','ViewPortfolio',{video:id}); }catch(e){}
+  try{ if(window.fbq) fbq('trackCustom','ViewPortfolio',{video:v.id}); }catch(e){}
 }
 function closeLb(){ lb.classList.remove('on'); lbf.innerHTML=''; }
 document.getElementById('lbx').onclick = closeLb;
@@ -892,13 +1106,14 @@ document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeLb()
    ※ 어려우시면 구글폼 링크만 보내주세요. 제가 채워서 드리겠습니다.
    ═══════════════════════════════════════════════════════════ */
 var GFORM = {
-  id: "여기에_구글폼_ID",
+  id: "1FAIpQLSeDu7j41dAwdNV9cInUW_IrTwVpxqr_r7L6RAE6IbrwbM19nQ",
   entry: {
-    name:   "entry.111111",   // 이름
-    phone:  "entry.222222",   // 연락처
-    card:   "entry.333333",   // 국민내일배움카드
-    time:   "entry.444444",   // 평일 참여 가능 여부
-    source: "entry.555555"    // 유입경로 (자동 입력)
+    name:   "entry.1251274978",  // 이름
+    phone:  "entry.30804409",    // 연락처
+    course: "entry.1069266816",  // 희망 과정 선택
+    card:   "entry.211107899",   // 국민내일배움카드
+    time:   "entry.1697785400",  // 평일 09:30~18:20 참여
+    source: "entry.1381669304"   // 유입경로 (자동 입력)
   }
 };
 
@@ -917,6 +1132,7 @@ function submitLead(e){
   var v = {
     name:   document.getElementById('nm').value,
     phone:  document.getElementById('ph').value,
+    course: document.getElementById('cs').value,
     card:   document.getElementById('cd').value,
     time:   document.getElementById('tm').value,
     source: document.getElementById('src').value
