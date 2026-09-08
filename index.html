@@ -3,67 +3,37 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>6개월 전엔 3D를 만져본 적도 없었습니다 | MBC플러스 엠플러닝</title>
-<meta name="description" content="수료생들이 6개월 만에 만든 작업물을 먼저 보세요. AI영상제작·3D모델링 국비지원교육. 자부담 최대 60만원, 노트북 무상 지원, 전국 실시간 온라인.">
-<meta property="og:title" content="6개월 전엔 3D를 만져본 적도 없었습니다">
+<title>전국 어디서나 100% 비대면 | MBC＋ 국비지원 엠플러닝</title>
+<meta name="description" content="수료생들이 6개월 만에 만든 작업물을 먼저 보세요. AI영상제작·3D모델링 국비지원교육. 자비부담금 0원~60만원, 고사양 노트북 무상 대여, 전국 실시간 온라인.">
+<meta property="og:title" content="전국 어디서나 100% 비대면 교육 · MBC＋ 국비지원">
 <meta property="og:description" content="수료생 작업물을 먼저 보세요 — MBC플러스 엠플러닝 AI·3D 국비지원교육">
 <meta property="og:image" content="https://img.youtube.com/vi/Q4iEB4HeyyY/maxresdefault.jpg">
 <meta property="og:type" content="website">
 
 <!-- ===================================================================
-     [설치 자리 1] 광고 추적 — 아래 세 칸에 ID만 넣으면 켜집니다.
-
-     빈 문자열("")로 두면 그 채널은 아예 불러오지 않으므로, 지금처럼
-     비워둔 상태로도 페이지는 정상 동작합니다.
-
-       naver : 네이버 검색광고 > 도구 > 프리미엄 로그분석에서 발급받는 값
-               ※ 이 값을 넣어야 검색광고 보고서의 "전환수"가 집계됩니다.
-       meta  : 메타 비즈니스 관리자 > 이벤트 관리자의 픽셀 ID (숫자)
-       kakao : 카카오모먼트 > 픽셀 & SDK 의 트랙 ID
+     [설치 자리 1] 추적 스크립트 — 주석을 풀고 ID만 넣으세요
      =================================================================== -->
+<!-- 네이버 프리미엄 로그분석
+<script src="//wcs.naver.net/wcslog.js"></script>
 <script>
-window.TRACKING = {
-  naver: "",
-  meta:  "",
-  kakao: ""
-};
-
-(function () {
-  var T = window.TRACKING || {};
-
-  // 네이버 프리미엄 로그분석 (검색광고 전환추적)
-  if (T.naver) {
-    window.wcs_add = window.wcs_add || {};
-    window.wcs_add["wa"] = T.naver;
-    var nv = document.createElement("script");
-    nv.async = true;
-    nv.src = "//wcs.naver.net/wcslog.js";
-    nv.onload = function () { try { if (window.wcs) wcs_do(); } catch (e) {} };
-    document.head.appendChild(nv);
-  }
-
-  // 메타 픽셀
-  if (T.meta) {
-    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-    document,'script','https://connect.facebook.net/en_US/fbevents.js');
-    try { fbq('init', T.meta); fbq('track', 'PageView'); } catch (e) {}
-  }
-
-  // 카카오 픽셀
-  if (T.kakao) {
-    var kk = document.createElement("script");
-    kk.async = true;
-    kk.src = "//t1.daumcdn.net/adfit/static/kp.js";
-    kk.onload = function () {
-      try { if (window.kakaoPixel) kakaoPixel(T.kakao).pageView(); } catch (e) {}
-    };
-    document.head.appendChild(kk);
-  }
-})();
+if(!wcs_add) var wcs_add={}; wcs_add["wa"]="여기에_네이버_ID";
+if(window.wcs) wcs_do();
 </script>
+-->
+<!-- 메타 픽셀
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','여기에_픽셀_ID'); fbq('track','PageView');
+</script>
+-->
+<!-- 카카오 픽셀
+<script src="//t1.daumcdn.net/adfit/static/kp.js"></script>
+<script>kakaoPixel('여기에_카카오_ID').pageView();</script>
+-->
 
 <style>
 :root{
@@ -96,9 +66,15 @@ strong{font-weight:700;color:var(--navy)}
 .hero .tag{display:inline-block;font-size:13px;font-weight:800;letter-spacing:.03em;
   background:rgba(59,130,246,.18);color:#93BBFF;border:1px solid rgba(59,130,246,.35);
   padding:7px 14px;border-radius:99px;margin-bottom:20px}
-.hero h1{font-size:38px;line-height:1.3;letter-spacing:-.035em;font-weight:800;color:#fff}
+.hero h1{font-size:50px;line-height:1.22;letter-spacing:-.045em;font-weight:900;color:#fff;
+  margin-top:6px}
 .hero h1 em{font-style:normal;color:var(--gold)}
-.hero .sub{color:#AEBDD4;font-size:18px;margin-top:16px}
+.hero .lede{margin-top:14px;display:inline-flex;align-items:center;gap:10px;
+  font-size:27px;font-weight:900;color:#fff;letter-spacing:-.035em;
+  background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.2);
+  padding:10px 22px;border-radius:12px}
+.hero .lede::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--gold)}
+.hero .sub{color:#AEBDD4;font-size:17px;margin-top:20px;line-height:1.7}
 .hero .facts{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:26px}
 .hero .facts span{font-size:14px;font-weight:600;background:rgba(255,255,255,.08);
   border:1px solid rgba(255,255,255,.15);color:#DCE6F5;padding:8px 14px;border-radius:8px}
@@ -156,6 +132,46 @@ strong{font-weight:700;color:var(--navy)}
 .spec th,.spec td{padding:13px 4px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
 .spec th{color:var(--muted);font-weight:600;width:32%;white-space:nowrap}
 .spec td{font-weight:700;color:var(--navy)}
+
+/* ── 정가 대비 실제 부담 ── */
+.scale{margin-top:22px;background:var(--soft);border:1px solid var(--line);
+  border-radius:16px;padding:24px 22px}
+.srow{display:flex;align-items:center;gap:16px;margin-bottom:14px}
+.srow .sl{flex:0 0 150px;font-size:14px;font-weight:800;color:var(--navy);
+  letter-spacing:-.02em;line-height:1.4}
+.strack{flex:1;display:flex;align-items:center;gap:10px;min-width:0}
+.sbar{height:46px;border-radius:9px;display:flex;align-items:center;
+  padding:0 16px;min-width:0}
+.sbar.full{width:100%;background:linear-gradient(90deg,#8FA3C0,#B7C5DA)}
+.sbar.full em{font-style:normal;font-size:17px;font-weight:800;color:#fff;
+  letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.sbar.mine{width:3.2%;min-width:14px;background:linear-gradient(180deg,#2B63E8,#1740A8)}
+.strack em.out{font-style:normal;font-size:19px;font-weight:900;color:var(--accent);
+  letter-spacing:-.03em;white-space:nowrap;font-variant-numeric:tabular-nums}
+.sfoot{font-size:14.5px;color:#4A5A73;line-height:1.7;margin-top:6px;
+  padding-top:14px;border-top:1px dashed var(--line)}
+
+/* ── 내는 돈 / 받는 돈 ── */
+.money{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+.mcard{border-radius:16px;padding:24px 20px}
+.mcard.out{background:var(--sblue);border:1px solid #C9DCFB}
+.mcard.in{background:linear-gradient(150deg,#16294A,#0C1A31);border:1px solid #24406B}
+.mico{width:46px;height:46px;border-radius:12px;display:flex;align-items:center;
+  justify-content:center;background:#fff}
+.mico svg{width:24px;height:24px;stroke:var(--accent);fill:none;
+  stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.mcard.in .mico{background:rgba(255,255,255,.1)}
+.mcard.in .mico svg{stroke:var(--gold)}
+.ml{font-size:13px;font-weight:800;color:var(--accent);margin-top:14px}
+.mcard.in .ml{color:var(--gold)}
+.mv{font-size:29px;font-weight:900;color:var(--navy);letter-spacing:-.04em;margin-top:3px}
+.mcard.in .mv{color:#fff}
+.mcard p{font-size:14.5px;color:#3F5372;line-height:1.7;margin:10px 0 0}
+.mcard.in p{color:#B7C8E0}
+.mcard.in p strong{color:#fff;font-weight:800}
+.mnote{margin-top:14px;background:#FFF7EA;border:1px solid #F0DDB6;border-radius:13px;
+  padding:16px 18px;font-size:15.5px;color:#7A4E0C;line-height:1.65;text-align:center}
+
 .box{background:var(--sblue);border-radius:14px;padding:22px;margin:16px 0}
 .box.green{background:var(--sgreen)}
 .box .lbl{font-size:13.5px;font-weight:800;color:var(--accent);margin-bottom:4px}
@@ -182,17 +198,6 @@ strong{font-weight:700;color:var(--navy)}
 .flow i{font-style:normal;color:var(--accent);font-weight:800;font-size:15px}
 
 /* spec cards */
-.speccards{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:20px}
-.sc{border:1px solid var(--line);border-radius:13px;padding:17px;background:#fff}
-.sc .ico{width:38px;height:38px;border-radius:10px;background:var(--sblue);
-  display:flex;align-items:center;justify-content:center;margin-bottom:11px}
-.sc .ico svg{width:20px;height:20px;stroke:var(--accent);fill:none;
-  stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
-.sc .k{font-size:13px;font-weight:700;color:var(--muted);margin-bottom:2px}
-.sc .v{font-size:17px;font-weight:800;color:var(--navy);line-height:1.4;letter-spacing:-.02em}
-.sc .n{font-size:13px;color:var(--muted);margin-top:3px}
-.sc.hl{background:var(--sblue);border-color:#C9DCFB}
-.sc.hl .ico{background:#fff}
 ul{list-style:none;margin:14px 0}
 li{position:relative;padding-left:22px;margin:11px 0;color:#33425A}
 li::before{content:"";position:absolute;left:2px;top:11px;width:7px;height:7px;
@@ -241,6 +246,8 @@ ol.steps li::before{content:counter(s);position:absolute;left:0;top:2px;width:26
 .stat{background:#0E1B2E;padding:20px 10px;text-align:center}
 .stat .n{font-size:27px;font-weight:800;color:var(--gold);letter-spacing:-.03em;line-height:1.2}
 .stat .l{font-size:12.5px;color:#9CADC6;margin-top:5px;line-height:1.4}
+.statnote{font-size:13px;color:#8FA2BC;line-height:1.65;margin-top:12px;text-align:center}
+.statnote strong{color:#C6D6EE}
 
 /* ── TIMETABLE ──────────────────────── */
 .tt{margin-top:22px;border:1px solid var(--line);border-radius:14px;overflow:hidden}
@@ -260,6 +267,36 @@ ol.steps li::before{content:counter(s);position:absolute;left:0;top:2px;width:26
   margin-right:5px;vertical-align:-1px}
 
 /* ── FEATURE CARDS ──────────────────── */
+/* ── 장비 지원 ── */
+.gearbox{margin-top:20px;background:var(--sblue);border:1px solid #C9DCFB;
+  border-radius:15px;padding:22px 20px}
+.gearbox .gh{font-size:17px;font-weight:800;color:var(--navy);letter-spacing:-.025em}
+.gearbox p{font-size:15px;color:#3F5372;line-height:1.75;margin:10px 0 0}
+.gearbox .gn{font-size:12.5px;color:var(--muted);margin-top:12px}
+
+/* ── 사후 관리 캠프 ── */
+.camps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px}
+.camp{border:1px solid var(--line);border-radius:15px;padding:20px 17px;background:#fff}
+.camp.hl{background:var(--sblue);border-color:#C9DCFB}
+.camp .ct{font-size:18px;font-weight:800;color:var(--navy);letter-spacing:-.025em}
+.camp .cs{font-size:12.5px;font-weight:800;color:var(--accent);margin-top:4px}
+.camp ul{margin:13px 0 0;padding-left:17px}
+.camp li{font-size:14px;color:#4A5A73;line-height:1.68;margin-bottom:5px}
+
+/* ── 수업 방식 ── */
+section.soft{background:var(--soft)}
+.ways{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:22px}
+.way{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px 18px}
+.way .wn{font-size:17px;font-weight:800;color:var(--navy);letter-spacing:-.025em;
+  padding-left:13px;border-left:4px solid var(--accent)}
+.way p{font-size:14.5px;color:#4A5A73;line-height:1.68;margin:11px 0 0}
+.mentors{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
+.mt{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 16px}
+.mt .mh{font-size:16px;font-weight:800;color:#fff;background:var(--navy);
+  display:inline-block;padding:6px 14px;border-radius:99px;letter-spacing:-.02em}
+.mt ul{margin:13px 0 0;padding-left:17px}
+.mt li{font-size:14px;color:#4A5A73;line-height:1.7}
+
 .feats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
 .feat{border:1px solid var(--line);border-radius:14px;padding:20px 17px;text-align:center;background:#fff}
 .feat .ic{width:46px;height:46px;border-radius:13px;background:var(--sblue);margin:0 auto 12px;
@@ -444,45 +481,18 @@ footer{padding:34px 0 40px;font-size:14px;color:var(--muted);text-align:center;l
 }
 .sticky{position:fixed;left:0;right:0;bottom:0;background:rgba(11,22,38,.97);
   backdrop-filter:blur(8px);padding:11px 16px;display:flex;gap:9px;z-index:50}
-.sticky a,.sticky button{flex:1;text-align:center;padding:13px 8px;border-radius:10px;
-  font-size:15px;font-weight:800;text-decoration:none;border:0;font-family:inherit;cursor:pointer}
+.sticky a{flex:1;text-align:center;padding:13px 8px;border-radius:10px;font-size:15px;
+  font-weight:800;text-decoration:none}
 .sticky .a1{background:var(--accent);color:#fff}
 .sticky .a2{background:rgba(255,255,255,.13);color:#fff}
-
-/* 빠른 상담 신청 시트 — 페이지 어디서든 스크롤 없이 신청하도록 */
-.sheet{position:fixed;inset:0;z-index:60;display:none}
-.sheet.on{display:block}
-.sheet .dim{position:absolute;inset:0;background:rgba(6,12,22,.62)}
-.sheet .pnl{position:absolute;left:0;right:0;bottom:0;top:auto;margin:0;max-width:none;
-  border-radius:18px 18px 0 0;padding:20px 18px calc(20px + env(safe-area-inset-bottom));
-  max-height:88vh;overflow:auto;box-shadow:0 -12px 40px rgba(0,0,0,.34)}
-.sheet .gr{width:38px;height:4px;border-radius:4px;background:#D8DFE9;margin:0 auto 14px}
-.sheet h3{font-size:20px;font-weight:900;color:var(--navy);margin:0 0 6px}
-.sheet .sd{font-size:14.5px;color:#4A5A73;margin:0 0 4px;line-height:1.55}
-.sheet .x2{position:absolute;top:8px;right:12px;font-size:26px;line-height:1;color:#8A97A8;
-  background:none;border:0;cursor:pointer;padding:4px 9px;font-family:inherit}
-@media (min-width:641px){
-  .sheet .pnl{left:50%;right:auto;bottom:auto;top:50%;transform:translate(-50%,-50%);
-    width:430px;border-radius:16px;max-height:86vh}
-}
-/* 히어로 보조 CTA — 이미 마음먹고 들어온 사람에게 즉시 신청 경로를 준다 */
-.hero .heroquick{display:block;margin:13px auto 0;background:none;border:0;color:#BFD3F2;
-  font-size:15px;font-weight:700;font-family:inherit;cursor:pointer;padding:8px 4px;
-  text-decoration:underline;text-underline-offset:4px}
-/* 신청폼 선택 입력 접기 */
-.formcard details.opt{margin-top:16px;border-top:1px solid #E6EBF2;padding-top:6px}
-.formcard details.opt summary{cursor:pointer;font-size:14px;font-weight:700;color:#4A5A73;
-  padding:8px 0;list-style:none}
-.formcard details.opt summary::-webkit-details-marker{display:none}
-.formcard details.opt summary::after{content:" +";color:var(--accent);font-weight:900}
-.formcard details.opt[open] summary::after{content:" \2212";color:var(--accent)}
 
 @media (max-width:640px){
   body{font-size:16px}
   .hero .strip img{height:104px}
   .hero .fade{height:108px}
-  .hero h1{font-size:29px}
-  .hero .sub{font-size:16.5px}
+  .hero h1{font-size:34px;line-height:1.24}
+  .hero .lede{font-size:20px;padding:9px 16px;gap:8px}
+  .hero .sub{font-size:15.5px}
   h2{font-size:23px}
   .grid{grid-template-columns:repeat(2,1fr);gap:9px}
   .tools{grid-template-columns:1fr}
@@ -496,6 +506,19 @@ footer{padding:34px 0 40px;font-size:14px;color:var(--muted);text-align:center;l
   .stats{grid-template-columns:repeat(2,1fr)}
   .stat{padding:16px 8px}
   .stat .n{font-size:22px}
+  .scale{padding:18px 16px}
+  .srow{flex-direction:column;align-items:stretch;gap:7px;margin-bottom:16px}
+  .srow .sl{flex:none;font-size:13.5px}
+  .sbar{height:40px;padding:0 12px}
+  .sbar.full em{font-size:15px}
+  .strack em.out{font-size:17px}
+  .money{grid-template-columns:1fr;gap:10px}
+  .mcard{padding:20px 17px}
+  .mv{font-size:26px}
+  .camps{grid-template-columns:1fr;gap:10px}
+  .ways{grid-template-columns:1fr;gap:10px}
+  .way{padding:17px 15px}
+  .mentors{grid-template-columns:1fr;gap:10px}
   .feats{grid-template-columns:1fr;gap:10px}
   .feat{display:flex;align-items:center;text-align:left;gap:14px;padding:15px}
   .feat .ic{margin:0;flex:0 0 auto;width:42px;height:42px}
@@ -525,10 +548,6 @@ footer{padding:34px 0 40px;font-size:14px;color:var(--muted);text-align:center;l
   .ttnote{flex-direction:column;gap:5px;align-items:center;font-size:12.5px}
   .tl{padding-left:28px}
   .tl .what{font-size:16px}
-  .speccards{gap:9px}
-  .sc{padding:14px}
-  .sc .v{font-size:15.5px}
-  .sc .n{font-size:12px}
   .midcta .h{font-size:18px}
   .flow{gap:6px;padding:14px 10px}
   .flow span{padding:7px 11px;font-size:13.5px}
@@ -549,17 +568,18 @@ footer{padding:34px 0 40px;font-size:14px;color:var(--muted);text-align:center;l
   </div>
   <div class="fade"></div>
   <div class="inner wrap">
-    <span class="tag">MBC플러스 엠플러닝 · KDT 국비지원교육</span>
-    <h1>6개월 전엔<br><em>3D를 만져본 적도</em> 없었습니다</h1>
-    <p class="sub">아래 작업물은 전부 수료생이 만든 것입니다.<br>대부분 비전공자로 시작했습니다.</p>
+    <span class="tag">고용노동부 K-Digital Training 훈련과정</span>
+    <h1>전국 어디서나<br><em>100% 비대면</em> 교육</h1>
+    <p class="lede">MBC＋ 국비지원</p>
+    <p class="sub">6개월 전엔 3D를 만져본 적도 없던 사람들이 만든 작업물입니다.<br>
+    아래는 전부 수료생 결과물이고, 대부분 비전공자로 시작했습니다.</p>
     <div class="facts">
-      <span>자부담 최대 60만원</span>
+      <span>자비부담금 0원 ~ 60만원</span>
       <span>장려금 월 최대 30만원</span>
-      <span>노트북 무상 대여</span>
-      <span>전국 온라인</span>
+      <span>고사양 노트북 대여</span>
+      <span>지역 제한 없음</span>
     </div>
     <a class="cta" href="#folio">수료생 작업물 보기 ↓</a>
-    <button type="button" class="heroquick" onclick="openSheet('hero')">작업물은 나중에 · 상담부터 신청하기 →</button>
   </div>
 </header>
 
@@ -580,11 +600,13 @@ footer{padding:34px 0 40px;font-size:14px;color:var(--muted);text-align:center;l
     </div>
 
     <div class="stats">
-      <div class="stat"><div class="n">6개월</div><div class="l">교육 기간</div></div>
-      <div class="stat"><div class="n">상위 20%</div><div class="l">인턴십 확정</div></div>
-      <div class="stat"><div class="n">170여 곳</div><div class="l">협약 기업</div></div>
-      <div class="stat"><div class="n">1인 1대</div><div class="l">노트북 무상</div></div>
+      <div class="stat"><div class="n">4.8</div><div class="l">평균 만족도<br>(5점 만점)</div></div>
+      <div class="stat"><div class="n">34 / 34명</div><div class="l">평가 참여자 전원이<br>추천했습니다</div></div>
+      <div class="stat"><div class="n">6기수</div><div class="l">누적 평가<br>기수</div></div>
+      <div class="stat"><div class="n">170여 곳</div><div class="l">채용 협약<br>기업</div></div>
     </div>
+    <p class="statnote">※ 고용노동부 <strong>고용24</strong> 훈련과정 상세에 공개된 기수별 수강생 만족도 결과입니다.
+    저희가 받은 설문이 아니라, 매 기수 종료 후 수강생이 정부 시스템에 직접 남긴 평가입니다.</p>
 
     <div class="midcta">
       <div class="h">"나도 6개월 뒤에 저걸 만들 수 있을까?"</div>
@@ -635,85 +657,135 @@ footer{padding:34px 0 40px;font-size:14px;color:var(--muted);text-align:center;l
   </div>
 </section>
 
-<!-- ══ 조건 ══ -->
+<!-- ══ 비용 ══ -->
 <section>
   <div class="wrap">
-    <div class="eyebrow">한눈에 보기</div>
-    <h2>과정 조건</h2>
-    <div class="speccards">
-      <div class="sc">
-        <div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 11h18"/></svg></div>
-        <div class="k">교육 기간</div><div class="v">6개월</div>
+    <div class="eyebrow">돈 이야기부터</div>
+    <h2>얼마 내고, 얼마 받나</h2>
+    <p class="lead">국비지원이라는 말이 사람마다 다르게 들립니다. 실제 숫자로만 적겠습니다.</p>
+
+    <!-- 정가 대비 실제 부담 비율 -->
+    <div class="scale">
+      <div class="srow">
+        <div class="sl">이 과정의 정가 수강료</div>
+        <div class="strack"><div class="sbar full"><em>18,585,600원</em></div></div>
       </div>
-      <div class="sc">
-        <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
-        <div class="k">수업 시간</div><div class="v">09:30 ~ 18:20</div><div class="n">월~금 전일제</div>
+      <div class="srow">
+        <div class="sl">내가 실제로 내는 돈</div>
+        <div class="strack"><div class="sbar mine"></div><em class="out">0원 ~ 600,000원</em></div>
       </div>
-      <div class="sc">
-        <div class="ico"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
-        <div class="k">수업 방식</div><div class="v">실시간 비대면</div><div class="n">전국 어디서나</div>
+      <div class="sfoot">나머지는 <strong>전액 국비지원</strong>입니다. 정가의 <strong>3% 남짓</strong>이거나, 조건에 따라 <strong>0원</strong>입니다.</div>
+    </div>
+
+    <!-- 내는 돈 / 받는 돈 -->
+    <div class="money">
+      <div class="mcard out">
+        <div class="mico"><svg viewBox="0 0 24 24"><path d="M3 8.5A2.5 2.5 0 0 1 5.5 6H19a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5.5A2.5 2.5 0 0 1 3 16.5z"/><path d="M3 8.5V7a2 2 0 0 1 2-2h11"/><circle cx="16.5" cy="12.5" r="1.4"/></svg></div>
+        <div class="ml">내는 돈</div>
+        <div class="mv">0원 ~ 60만원</div>
+        <p>지원 유형에 따라 <strong>훈련비가 전액 지원되어 0원</strong>인 분도 있고, 일부 자비부담금이 발생하는 분도 있습니다.</p>
       </div>
-      <div class="sc hl">
-        <div class="ico"><svg viewBox="0 0 24 24"><path d="M5 6l3.5 8L12 7l3.5 7L19 6"/><path d="M3.5 11h17M3.5 14.5h17"/></svg></div>
-        <div class="k">자비부담금</div><div class="v">최대 60만원</div><div class="n">나머지 전액 국비지원</div>
-      </div>
-      <div class="sc hl">
-        <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3v13"/><path d="M7.5 11.5 12 16l4.5-4.5"/><path d="M4 20h16"/></svg></div>
-        <div class="k">훈련장려금</div><div class="v">월 최대 30만원</div><div class="n">받으면서 다닙니다</div>
-      </div>
-      <div class="sc hl">
-        <div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M2 20h20"/></svg></div>
-        <div class="k">장비 지원</div><div class="v">노트북 무상 대여</div><div class="n">1인 1대 · 보증금 없음</div>
-      </div>
-      <div class="sc" style="grid-column:1/-1">
-        <div class="ico"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/></svg></div>
-        <div class="k">필수 조건</div><div class="v">국민내일배움카드 발급</div><div class="n">아직 없으셔도 발급 절차를 안내해 드립니다</div>
+      <div class="mcard in">
+        <div class="mico"><svg viewBox="0 0 24 24"><path d="M12 3v11"/><path d="M8 10.5 12 14.5l4-4"/><path d="M4 15v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"/></svg></div>
+        <div class="ml">받는 돈</div>
+        <div class="mv">월 최대 30만원</div>
+        <p>훈련장려금을 <strong>받으면서</strong> 다닙니다. 국민취업지원제도 참여 시 <strong>월 최대 81만원</strong>까지 받습니다.</p>
       </div>
     </div>
 
-    <h3 style="margin-top:36px">얼마 내고, 얼마 받나</h3>
-    <div class="box">
-      <div class="lbl">내는 돈</div>
-      <div class="big">자비부담금 최대 60만원</div>
-      <div class="sub">6개월 전 과정 기준 · 나머지는 전액 국비지원</div>
+    <div class="mnote">
+      6개월 과정입니다. <strong>조건이 맞으면 6개월간 받는 장려금 총액이 자비부담금을 넘어섭니다.</strong>
     </div>
-    <div class="box green">
-      <div class="lbl">받는 돈</div>
-      <div class="big">훈련장려금 월 최대 30만원</div>
-      <div class="sub">국민취업지원제도 1유형 대상자는 <strong>월 최대 81만원</strong><br>6개월 과정이므로 조건이 맞으면 총액이 자비부담금을 넘어섭니다</div>
-    </div>
-    <p class="muted">※ 장려금은 지역·유형에 따라 달라집니다. 자세한 내용은 상담 시 안내해 드립니다.</p>
-    <p class="muted">※ 「국비지원 무료교육」으로 검색해 오셨다면 — 완전 무료는 아닙니다. 위 금액이 실제 조건입니다.</p>
-    <div class="cta2">
-      <div class="t">내 조건에 맞는지 1분이면 확인됩니다</div>
-      <a href="#apply">상담 신청</a>
-    </div>
+
+    <p class="muted">※ 자비부담금과 장려금은 개인의 지원 유형·지역에 따라 달라집니다. 정확한 금액은 상담 시 안내해 드립니다.</p>
+    <p class="muted">※ 「국비지원 무료교육」으로 검색해 오셨다면 — <strong>조건이 맞으면 실제로 0원</strong>입니다. 다만 모든 분이 0원은 아니라서, 확인 없이 무료라고 말씀드리지 않습니다.</p>
   </div>
 </section>
 
 <!-- ══ 장비/환경 ══ -->
 <section>
   <div class="wrap">
-    <div class="eyebrow">시작 장벽</div>
-    <h2>집에서, 장비 없이 시작합니다</h2>
-    <p class="lead">"저건 장비가 좋아야 하는 거 아닌가" 생각하셨다면, 걱정 안 하셔도 됩니다.</p>
+    <div class="eyebrow">장비 지원</div>
+    <h2>고사양 노트북, 저희가 빌려드립니다</h2>
+    <p class="lead">언리얼엔진과 Cinema 4D는 일반 노트북으로 돌아가지 않습니다.<br>
+    그래서 <strong>교육 기간 내내 쓰실 고사양 노트북을 1인 1대 무상 대여</strong>해 드립니다. 보증금도 없습니다.</p>
 
     <div class="feats">
       <div class="feat">
-        <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V20h14V9.5"/><path d="M9.5 20v-6h5v6"/></svg></div>
-        <div class="fx"><b>집에서 그대로</b><span>학원 이동 0분 · 실시간 비대면</span></div>
+        <div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M2 20h20"/></svg></div>
+        <div class="fx"><b>고사양 노트북 무상 대여</b><span>1인 1대 · 보증금 없음 · 교육 기간 내내</span></div>
       </div>
       <div class="feat">
-        <div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M2 20h20"/></svg></div>
-        <div class="fx"><b>노트북 무상 대여</b><span>고성능 1인 1대 · 보증금 없음</span></div>
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3v6M12 3 9.5 5.5M12 3l2.5 2.5"/><path d="M4 12h16v8H4z"/><path d="M8 16h8"/></svg></div>
+        <div class="fx"><b>정품 프로그램 제공</b><span>언리얼엔진 · 3D 툴 라이선스 전부</span></div>
       </div>
       <div class="feat">
         <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18"/></svg></div>
-        <div class="fx"><b>전국 어디서나</b><span>지역 제한 없음 · 다시보기 제공</span></div>
+        <div class="fx"><b>집에서 전국 어디서나</b><span>학원 이동 0분 · 지역 제한 없음</span></div>
       </div>
     </div>
 
-    <p class="muted" style="text-align:center;margin-top:16px">언리얼엔진·Cinema 4D는 일반 노트북으로 버겁습니다.<br><strong>장비 때문에 시작을 못 하는 일은 없도록</strong> 하기 위한 지원입니다.</p>
+    <div class="gearbox">
+      <div class="gh">이런 걸 사서 시작하실 필요가 없습니다</div>
+      <p>3D 작업이 가능한 노트북은 개인이 준비하면 <strong>수백만원</strong>이 듭니다.
+      "장비부터 사야 하나" 때문에 시작을 미루는 일이 없도록,
+      <strong>고사양 실습 환경을 훈련 기간 동안 그대로 지원</strong>합니다.
+      프로그램도 정품 최신 버전으로 라이선스까지 제공됩니다.</p>
+      <p class="gn">※ 고사양·고성능 장비로 지원하며, 부품 수급 상황에 따라 사양이 변동될 수 있습니다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 수업 방식 ══ -->
+<section class="soft">
+  <div class="wrap">
+    <div class="eyebrow">수업 방식</div>
+    <h2>혼자 알아서 따라가는 인강이 아닙니다</h2>
+    <p class="lead">비대면이라고 하면 "영상만 틀어놓고 알아서 하는 것"을 떠올리기 쉽습니다.<br>
+    여기는 반대입니다. <strong>수업 시간에 강사가 화면 앞에 있고, 모르는 건 그 자리에서 물어보시면 됩니다.</strong></p>
+
+    <div class="ways">
+      <div class="way">
+        <div class="wn">실시간 라이브 수업</div>
+        <p>녹화본을 혼자 보는 방식이 아닙니다. ZOOM으로 강사와 같은 시간에 만나기 때문에, 막히는 부분을 쌓아두지 않고 바로 물어볼 수 있습니다.</p>
+      </div>
+      <div class="way">
+        <div class="wn">그날 배운 건 그날 복습</div>
+        <p>라이브 수업 중에 복습 구간을 따로 둡니다. 진도를 밀어붙이지 않고, 그날 배운 건 그날 이해하고 넘어가도록 짜여 있습니다.</p>
+      </div>
+      <div class="way">
+        <div class="wn">당일 녹화본 제공</div>
+        <p>수업이 끝나면 그날 녹화본이 올라옵니다. 한 번에 이해 못 하셔도 됩니다. 놓친 부분은 몇 번이든 다시 보실 수 있습니다.</p>
+      </div>
+      <div class="way">
+        <div class="wn">AI 학습관리 시스템</div>
+        <p>개인별 과제 평가와 학습 성취도를 AI LMS가 관리합니다. 본인이 어디에 강한지가 데이터로 남고, 나중에 취업 방향을 잡을 때 근거가 됩니다.</p>
+      </div>
+    </div>
+
+    <h3 style="margin-top:34px">막히면 붙잡아 주는 사람이 따로 있습니다</h3>
+    <p class="lead" style="margin-top:6px">강사 외에 <strong>멘토 세 명이 한 팀</strong>으로 붙습니다. 각자 맡는 일이 다릅니다.</p>
+    <div class="mentors">
+      <div class="mt">
+        <div class="mh">교육멘토</div>
+        <ul><li>수업 이해도 관리</li><li>학습 피드백</li><li>포트폴리오 지도</li></ul>
+      </div>
+      <div class="mt">
+        <div class="mh">기술멘토</div>
+        <ul><li>수업 환경 세팅</li><li>프로그램 오류 해결</li><li>실습 지원</li></ul>
+      </div>
+      <div class="mt">
+        <div class="mh">운영멘토</div>
+        <ul><li>출석 관리</li><li>일정 안내</li><li>훈련과정 행정 지원</li></ul>
+      </div>
+    </div>
+    <p class="muted" style="text-align:center;margin-top:16px">
+      비전공자가 대부분이라, <strong>혼자 끙끙대다 포기하는 일이 없도록</strong> 만들어 둔 구조입니다.</p>
+
+    <div class="cta2">
+      <div class="t">시간표가 지금 일정과 맞을지, 같이 확인해 드립니다</div>
+      <a href="#apply">상담 신청</a>
+    </div>
   </div>
 </section>
 
@@ -744,6 +816,11 @@ footer{padding:34px 0 40px;font-size:14px;color:var(--muted);text-align:center;l
           <div class="co"><div class="lg"><img loading="lazy" src="https://studio.mbcplus-learning.com/img/index/teamlab.png" alt="팀랩" onerror="this.parentNode.style.display='none'"></div><b>팀랩(teamLab)</b><span>경계와 국경을 허무는 아트 컬렉티브</span></div>
         </div>
       </div>
+      <div class="step gold">
+        <div class="when">우수교육생 특전</div>
+        <div class="what">일본 기업 연수 (3박 4일)</div>
+        <p class="desc">국내 국비지원 과정에서 보기 드문 특전입니다. 실제로 일본 현지 기업을 방문합니다.</p>
+      </div>
       <div class="step">
         <div class="when">채용</div>
         <div class="what">협약 기업 170여 곳 연계 · 채용 가산점</div>
@@ -766,6 +843,48 @@ footer{padding:34px 0 40px;font-size:14px;color:var(--muted);text-align:center;l
     <div class="callout">
       <p><strong>인턴십은 상위 20% 확정이고, 전원 보장이 아닙니다.</strong></p>
       <p>"수료하면 취업된다"고 말씀드리지 않습니다. 성과를 낸 교육생이 갈 수 있는 자리를 실제로 확보해두고 있다는 뜻입니다.</p>
+      <p style="margin-top:10px">다만 <strong>상위 20%에 못 들어도 그냥 끝나지는 않습니다.</strong> 아래 세 가지가 수료 후에 이어집니다.</p>
+    </div>
+
+    <h3 style="margin-top:34px">수료했다고 끝나지 않습니다</h3>
+    <p class="lead" style="margin-top:6px">과정이 끝난 뒤에도 세 갈래로 지원이 이어집니다. 본인이 가려는 방향을 고르시면 됩니다.</p>
+    <div class="camps">
+      <div class="camp">
+        <div class="ct">인턴십 캠프</div>
+        <div class="cs">기수별 우수 수료생 상위 20%</div>
+        <ul>
+          <li>콘텐츠·미디어·크리에이티브 기업과 연계된 인턴십 (2~3개월)</li>
+          <li>MBC플러스, 덱스터, 자이언트스텝, 스토익, 팀랩 등</li>
+          <li>참여 기업은 계속 추가되고 있습니다</li>
+        </ul>
+      </div>
+      <div class="camp hl">
+        <div class="ct">취업 캠프</div>
+        <div class="cs">수료 후 최대 6개월간 지원</div>
+        <ul>
+          <li>이력서·포트폴리오 1:1 피드백</li>
+          <li>개인별 진로 상담과 취업 방향 설정</li>
+          <li>실무 중심 포트폴리오 구성 방향 가이드</li>
+          <li>콘텐츠·미디어 분야 취업 연계 지원</li>
+        </ul>
+      </div>
+      <div class="camp">
+        <div class="ct">창업 캠프</div>
+        <div class="cs">1인 크리에이터·프리랜서 지망</div>
+        <ul>
+          <li>개인 창작 활동 방향 컨설팅</li>
+          <li>수익화 구조와 콘텐츠 운영 전략</li>
+          <li>프로젝트 외주 작업 연계</li>
+          <li>1인 창작자를 위한 사업 운영 기초 안내</li>
+        </ul>
+      </div>
+    </div>
+    <p class="muted" style="text-align:center;margin-top:16px">
+      <strong>취업 캠프는 수료 후 최대 6개월</strong>입니다. 6개월 배우고 끝이 아니라, 그 뒤 6개월을 더 같이 갑니다.</p>
+
+    <div class="cta2">
+      <div class="t">어느 캠프가 본인에게 맞을지도 상담에서 같이 봐드립니다</div>
+      <a href="#apply">상담 신청</a>
     </div>
   </div>
 </section>
@@ -830,27 +949,12 @@ footer{padding:34px 0 40px;font-size:14px;color:var(--muted);text-align:center;l
     <p class="muted" style="text-align:center;margin-top:16px">현장 실무 프로젝트 <strong>70편 이상</strong>을 보유한 강사진이 담당합니다.<br>
     <strong>다섯 명 모두 MBC플러스 KDT과정 전담 강사</strong>입니다.</p>
 
-    <div class="feats" style="margin-top:20px">
-      <div class="feat">
-        <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 19V7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12"/><path d="M4 19h16M9 9h6M9 13h6"/></svg></div>
-        <div class="fx"><b>운영팀</b><span>출결·행정·상담</span></div>
-      </div>
-      <div class="feat">
-        <div class="ic"><svg viewBox="0 0 24 24"><path d="M8 8 4 12l4 4M16 8l4 4-4 4M13.5 6l-3 12"/></svg></div>
-        <div class="fx"><b>기술멘토</b><span>막힌 작업 해결</span></div>
-      </div>
-      <div class="feat">
-        <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-3.5 3.1-6 7-6s7 2.5 7 6"/></svg></div>
-        <div class="fx"><b>교육멘토</b><span>진도 관리</span></div>
-      </div>
-    </div>
-    <p class="muted" style="text-align:center;margin-top:14px">강사 혼자 진행하지 않습니다. 진도를 놓쳤을 때 잡아주는 사람이 붙습니다.</p>
-
+    <p class="muted" style="text-align:center;margin-top:14px">강사 혼자 진행하지 않습니다. 앞에서 보신 <strong>교육·기술·운영 멘토 3인</strong>이 함께 붙습니다.</p>
   </div>
 </section>
 
 <!-- ══ 후기 ══ -->
-<section class="rev" id="rev">
+<section class="rev">
   <div class="wrap">
     <div class="eyebrow">실제 수강 후기</div>
     <h2>먼저 다녀간 사람들의 말</h2>
@@ -861,6 +965,9 @@ footer{padding:34px 0 40px;font-size:14px;color:var(--muted);text-align:center;l
       <div class="qc"><p>강사님만 계실 줄 알았지만 운영팀, 기술멘토, 교육멘토 등 다양한 분들이 학생분들을 케어</p></div>
       <div class="qc"><p>비전공자로써 열심히 수업진도를 따라가면서도 최종과제시 어느정도의 능력 향상</p></div>
       <div class="qc"><p>6개월간의 시간이 전혀 아깝지 않게 느껴졌어요</p></div>
+      <div class="qc"><p>나이가 좀 있는 편이라 타 학원처럼 입학 거부를 당할까 걱정했는데, 오히려 제출한 서류부터 꼼꼼히 읽어보시고 상담해주시는 게 잘 느껴지고</p></div>
+      <div class="qc"><p>언리얼과 C4D라는 두 가지 툴을 병행해 배우는 과정이 흔치 않은데, 각각의 장점과 활용 방식을 명확하게 알 수 있어</p></div>
+      <div class="qc"><p>강사님이 훈련시간 외에도 개인 시간을 투자하셔서 즉각 피드백을 해주시어 감사합니다</p></div>
     </div>
   </div>
 </section>
@@ -875,16 +982,20 @@ footer{padding:34px 0 40px;font-size:14px;color:var(--muted);text-align:center;l
         <div class="ttl"><em>✓</em>이런 분께 맞습니다</div>
         <ul>
           <li>비전공자, 3D를 처음 만져보는 분<small>앞의 작업물을 만든 수료생 대부분이 그랬습니다</small></li>
-          <li>6개월을 온전히 쓸 수 있는 분<small>평일 낮에 집중하실 수 있다면</small></li>
-          <li>편집을 넘어 제작까지 하고 싶은 분<small>기획부터 결과물까지 한 흐름으로</small></li>
-          <li>지방에 계신 분<small>전국 어디서나 집에서 수강</small></li>
+          <li>취업에 낼 포트폴리오가 필요한 분<small>실전 프로젝트 결과물이 그대로 포트폴리오가 됩니다</small></li>
+          <li>편집을 넘어 제작까지 하고 싶은 분<small>단순 툴이 아니라 제작 시스템 전체를 배웁니다</small></li>
+          <li>지방에 계신 분<small>전국 어디서나 집에서, 오프라인과 같은 실시간 수업</small></li>
+          <li>AI 콘텐츠로 창업·프리랜서를 준비하는 분<small>수료 후 창업 캠프가 따로 있습니다</small></li>
+          <li>나이가 걱정되는 분<small>"입학 거부당할까 걱정했는데 오히려 서류부터 꼼꼼히 봐주셨다"는 후기가 있습니다</small></li>
         </ul>
       </div>
       <div class="fitbox no">
         <div class="ttl"><em>!</em>이런 경우엔 확인이 필요합니다</div>
         <ul>
-          <li>직장·학교와 병행하려는 분<small>평일 09:30~18:20 전일제, 실시간 참여 필수</small></li>
+          <li>직장에 다니고 계신 분<small>재직자도 가능하지만 회사의 사전 동의서를 내셔야 합니다</small></li>
+          <li>학교와 병행하려는 분<small>평일 09:30~18:20 전일제, 실시간 출석 필수입니다</small></li>
           <li>과거 KDT 과정 수강 이력이 있는 분<small>이력에 따라 다르니 확인이 필요합니다</small></li>
+          <li>내일배움카드가 아직 없는 분<small>발급이 필수지만, 절차를 안내해 드립니다</small></li>
         </ul>
       </div>
     </div>
@@ -908,10 +1019,18 @@ footer{padding:34px 0 40px;font-size:14px;color:var(--muted);text-align:center;l
       <div class="ans">아닙니다. 한 번 안내드리고, <strong>결정은 본인이 편하실 때 하시면 됩니다.</strong> 조건이 안 맞는 분께는 저희가 먼저 다른 과정을 권해드립니다.</div></details>
     <details class="faq2"><summary>내일배움카드가 아직 없는데요?</summary>
       <div class="ans">괜찮습니다. 발급은 온라인으로 가능하고, 절차를 안내해 드립니다. <strong>카드가 없어도 상담은 가능</strong>합니다.</div></details>
-    <details class="faq2"><summary>노트북, 정말 무료인가요?</summary>
-      <div class="ans">교육 기간 동안 <strong>1인 1대 무상 대여</strong>입니다. 별도 비용도, 보증금도 없습니다.</div></details>
+    <details class="faq2"><summary>노트북은 주는 건가요, 빌려주는 건가요?</summary>
+      <div class="ans">사는 게 아니라 <strong>빌려드리는 것</strong>입니다. 교육 기간 동안 3D 작업이 가능한 <strong>고사양 노트북을 1인 1대 무상 대여</strong>해 드리고, 별도 비용도 보증금도 없습니다. 수료 후 반납하시면 됩니다.</div></details>
     <details class="faq2"><summary>지방에 사는데 가능한가요?</summary>
       <div class="ans">전 과정 실시간 비대면입니다. <strong>지역 제한이 없습니다.</strong> 실제로 전국에서 수강하고 계십니다.</div></details>
+    <details class="faq2"><summary>수강료가 정말 0원인가요?</summary>
+      <div class="ans">정가는 <strong>1,800만원대</strong>이고, 나머지는 국비로 지원됩니다. 다만 <strong>지원 유형에 따라 자비부담금이 0원인 분도 있고, 최대 60만원이 발생하는 분도 있습니다.</strong> 확인 없이 "무료"라고 말씀드리지 않는 이유입니다. 상담에서 본인이 어느 쪽인지 바로 알려드립니다.</div></details>
+    <details class="faq2"><summary>녹화 강의를 혼자 보는 방식인가요?</summary>
+      <div class="ans">아닙니다. <strong>ZOOM 실시간 수업이고 출석 체크가 필수</strong>입니다. 다만 수업이 끝나면 그날 녹화본이 제공되어 몇 번이든 복습하실 수 있습니다.</div></details>
+    <details class="faq2"><summary>직장에 다니고 있는데 가능한가요?</summary>
+      <div class="ans">재직자도 수강 가능합니다. 다만 평일 09:30~18:20 실시간 참여가 필수라, <strong>회사의 사전 동의서를 제출</strong>하셔야 참여할 수 있습니다.</div></details>
+    <details class="faq2"><summary>면접이 있다던데 어렵나요?</summary>
+      <div class="ans">지원서 제출 후 <strong>ZOOM 인성 면접</strong>으로 진행됩니다. 기술을 보는 자리가 아니라 <strong>교육 참여 의지와 과정 이해도</strong>를 확인하는 자리입니다. 3D를 못 다뤄서 떨어지는 시험이 아닙니다.</div></details>
     <details class="faq2"><summary>지금 지원하면 언제 시작하나요?</summary>
       <div class="ans">가장 가까운 기수 일정과 남은 자리를 안내해 드립니다. <strong>기수는 정원이 차면 마감</strong>되고, 다음 기수는 몇 달 뒤입니다.</div></details>
   </div>
@@ -994,8 +1113,6 @@ footer{padding:34px 0 40px;font-size:14px;color:var(--muted);text-align:center;l
         <input id="nm" name="name" type="text" required autocomplete="name" placeholder="홍길동">
         <label for="ph">연락처</label>
         <input id="ph" name="phone" type="tel" required autocomplete="tel" inputmode="numeric" placeholder="010-0000-0000">
-        <details class="opt">
-        <summary>선택 입력 — 미리 알려주시면 상담이 빨라집니다</summary>
         <label for="cs">희망 과정</label>
         <select id="cs" name="course">
           <option value="아직 정하지 못했습니다">아직 정하지 못했습니다</option>
@@ -1014,7 +1131,6 @@ footer{padding:34px 0 40px;font-size:14px;color:var(--muted);text-align:center;l
           <option>가능합니다</option>
           <option>어렵습니다</option>
         </select>
-        </details>
         <input type="hidden" id="src" name="source" value="">
         <label class="agree">
           <input type="checkbox" required>
@@ -1056,38 +1172,8 @@ footer{padding:34px 0 40px;font-size:14px;color:var(--muted);text-align:center;l
 </footer>
 
 <div class="sticky">
-  <button type="button" class="a1" onclick="openSheet('sticky')">상담 신청</button>
+  <a class="a1" href="#apply">상담 신청</a>
   <a class="a2" href="tel:01067813555">전화 문의</a>
-</div>
-
-<!-- 빠른 상담 신청 시트: 신청폼이 17번째 화면에 있어서, 어디서든 바로 열리도록 둡니다 -->
-<div class="sheet" id="sheet" aria-hidden="true">
-  <div class="dim" onclick="closeSheet()"></div>
-  <div class="pnl formcard" role="dialog" aria-modal="true" aria-labelledby="shT">
-    <button type="button" class="x2" onclick="closeSheet()" aria-label="닫기">&times;</button>
-    <div class="gr"></div>
-    <div id="shDone" style="display:none;text-align:center;padding:16px 6px">
-      <div style="font-size:40px;line-height:1">&#9989;</div>
-      <p style="font-size:18px;font-weight:800;color:var(--navy);margin-top:10px">신청이 접수되었습니다</p>
-      <p style="color:#4A5A73;margin-top:4px;font-size:14.5px">영업일 기준 1일 이내에 연락드리겠습니다.<br>급하시면 아래로 바로 전화 주셔도 됩니다.</p>
-      <a class="btn" href="tel:01067813555">전화로 문의 010-6781-3555</a>
-    </div>
-    <form id="shForm" onsubmit="return submitQuick(event)">
-      <h3 id="shT">조건만 확인해 드립니다</h3>
-      <p class="sd">이름과 연락처만 남겨주시면, 지원 가능한 조건인지 확인해 연락드립니다.<br>
-      상담만 받고 지원하지 않으셔도 전혀 문제 없습니다.</p>
-      <label for="qnm">이름</label>
-      <input id="qnm" type="text" required autocomplete="name" placeholder="홍길동">
-      <label for="qph">연락처</label>
-      <input id="qph" type="tel" required autocomplete="tel" inputmode="numeric" placeholder="010-0000-0000">
-      <label class="agree">
-        <input type="checkbox" id="qag" required>
-        <span>상담을 위한 개인정보(이름, 연락처) 수집&middot;이용에 동의합니다. 상담 목적으로만 사용하며 상담 종료 후 파기합니다.</span>
-      </label>
-      <button class="btn" type="submit">상담 신청하기</button>
-      <a class="btn line" href="tel:01067813555" style="margin-top:10px">전화로 바로 문의 010-6781-3555</a>
-    </form>
-  </div>
 </div>
 
 <div class="lb" id="lb"><span class="x" id="lbx">&times;</span>
@@ -1205,75 +1291,9 @@ var GFORM = {
 };
 
 function trackLead(){
-  var T = window.TRACKING || {};
   try{ if(window.fbq) fbq('track','Lead'); }catch(e){}
-  try{ if(window.kakaoPixel && T.kakao) kakaoPixel(T.kakao).completeRegistration(); }catch(e){}
+  try{ if(window.kakaoPixel) kakaoPixel('여기에_카카오_ID').completeRegistration(); }catch(e){}
   try{ if(window.wcs){ var c={}; c["type"]="4"; c["value"]="0"; wcs.trans(c); } }catch(e){}
-}
-
-/* 구글폼 전송 (전체 폼과 빠른신청 시트가 함께 씁니다) */
-function postToGForm(v){
-  var f = document.createElement('form');
-  f.action = 'https://docs.google.com/forms/d/e/' + GFORM.id + '/formResponse';
-  f.method = 'POST';
-  f.target = 'gfsink';
-  Object.keys(GFORM.entry).forEach(function(k){
-    var i = document.createElement('input');
-    i.type = 'hidden'; i.name = GFORM.entry[k]; i.value = v[k] || '';
-    f.appendChild(i);
-  });
-  document.body.appendChild(f);
-  f.submit();
-  document.body.removeChild(f);
-}
-
-/* ── 빠른 상담 신청 시트 ──────────────────────────────────────────────
-   신청폼이 페이지 한참 아래(모바일 기준 17번째 화면)에 있어서,
-   스티키바와 히어로에서 바로 열 수 있게 만든 축약 폼입니다.
-   이름·연락처만 받고, 나머지 3개 항목은 전화 상담에서 확인하므로
-   아래 기본값으로 보냅니다. 기본값은 QUICK_DEFAULTS 만 고치면 됩니다. */
-var QUICK_DEFAULTS = {
-  course: '아직 정하지 못했습니다',
-  card:   '발급 방법을 모르겠습니다',
-  time:   '가능합니다'
-};
-
-function openSheet(from){
-  var s = document.getElementById('sheet');
-  window.__sheetFrom = from || 'sticky';
-  s.classList.add('on');
-  s.setAttribute('aria-hidden', 'false');
-  document.body.style.overflow = 'hidden';
-  setTimeout(function(){ try{ document.getElementById('qnm').focus(); }catch(e){} }, 130);
-}
-
-function closeSheet(){
-  var s = document.getElementById('sheet');
-  s.classList.remove('on');
-  s.setAttribute('aria-hidden', 'true');
-  document.body.style.overflow = '';
-}
-
-document.addEventListener('keydown', function(e){
-  if(e.key === 'Escape' && document.getElementById('sheet').classList.contains('on')) closeSheet();
-});
-
-function submitQuick(e){
-  e.preventDefault();
-  var srcEl = document.getElementById('src');
-  var src = (srcEl && srcEl.value) ? srcEl.value + ' ' : '';
-  postToGForm({
-    name:   document.getElementById('qnm').value,
-    phone:  document.getElementById('qph').value,
-    course: QUICK_DEFAULTS.course,
-    card:   QUICK_DEFAULTS.card,
-    time:   QUICK_DEFAULTS.time,
-    source: src + '· 빠른신청(' + (window.__sheetFrom || 'sticky') + ') 카드·일정 미확인'
-  });
-  trackLead();
-  document.getElementById('shForm').style.display = 'none';
-  document.getElementById('shDone').style.display = 'block';
-  return false;
 }
 
 function submitLead(e){
@@ -1290,7 +1310,19 @@ function submitLead(e){
     time:   document.getElementById('tm').value,
     source: document.getElementById('src').value
   };
-  postToGForm(v);
+  var f = document.createElement('form');
+  f.action = 'https://docs.google.com/forms/d/e/' + GFORM.id + '/formResponse';
+  f.method = 'POST';
+  f.target = 'gfsink';
+  Object.keys(GFORM.entry).forEach(function(k){
+    var i = document.createElement('input');
+    i.type = 'hidden'; i.name = GFORM.entry[k]; i.value = v[k] || '';
+    f.appendChild(i);
+  });
+  document.body.appendChild(f);
+  f.submit();
+  document.body.removeChild(f);
+
   trackLead();
   document.getElementById('leadForm').style.display = 'none';
   document.getElementById('done').style.display = 'block';
